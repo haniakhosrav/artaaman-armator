@@ -54,7 +54,7 @@ exports.handleNews = async (req, res) => {
 
 exports.handleLoadingNews = async (req, res) => {
     try {
-        const article = await newsModel.findOne({id: req.params.id});
+        const article = await newsModel.findOne({_id: req.params.id});
         console.log(article)
         res.render('singleNewsPage', {
            article,
