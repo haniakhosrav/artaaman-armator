@@ -1,0 +1,194 @@
+@media only screen and (max-width: 1066px) {
+  .myWhyUs-contents {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .myHeader {
+    background: url(../images/headearBg-right-edit.svg) right top no-repeat,
+      url(../images/headearBg-left-edit.svg) left top no-repeat;
+    background-size: 20vw, 20vw;
+  }
+  .myNavbar-contents {
+    width: 8%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .myWhyUs-item {
+    width: 12em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .swiper-slide img {
+    min-height: 40vh;
+  }
+  .mySwiper-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .myGallery-wrapper {
+    width: 80%;
+  }
+  .myFqa-container {
+    padding: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .myFqa-container {
+    margin: 3rem auto;
+    padding: 1rem;
+  }
+  .myFooter-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .myFooter-emailAddress {
+    display: none;
+  }
+  .myFooter-emailIcone{
+    display: block;
+  } 
+  .myFooter-container p{
+    order:-1;
+  }
+ .myFooter-container h5:nth-of-type(2) {
+    order: -1;
+  }  
+  .myFooter-right{
+    order: -1;
+  }
+  .myFooter-copyRight{
+    order: 1;
+  }
+  .mySocialLinks{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .accordion {
+    font-size: 16px;
+  }
+
+  .mySlogan-container {
+    padding: 2rem;
+  }
+
+  .myGallery-wrapper {
+    width: 80%;
+  }
+  .mySwiper-container {
+    width: 100%;
+  }
+  .myHeader-contents h1 {
+    font-size: 1.5rem;
+  }
+  .myHeader-contents button {
+    padding: 0.3rem 1.8rem;
+  }
+  .myHeader-contents img {
+    width: 70%;
+  }
+  .myNavbar-contents {
+    width: 100%;
+  }
+  .myNavbar-contents ul {
+    width: 100%;
+    min-height: 80vh;
+    z-index: 10;
+  }
+  .myAboutUs-container {
+    width: 90%;
+    font-size: 80%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .owl-theme .owl-dots .owl-dot {
+    zoom: 0.8;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #myNavbar-logo svg {
+    width: 80%;
+  }
+  .myNavbar button svg {
+    width: 80%;
+  }
+  .myHeader-contents button {
+    margin: 0 0;
+    padding: 0.1rem 0.5rem;
+  }
+  .myAboutUs-container {
+    width: 100%;
+    background-size: 4em, 2em;
+    font-size: 50%;
+  }
+  .myAboutUs-container h2 {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 305px) {
+  .myHeader-contents h1 {
+    width: 100%;
+    font-size: 15vw;
+  }
+  .myHeader-contents button {
+    padding: 0.1rem 1rem;
+    font-size: 5vw;
+  }
+  .myHeader-contents button,
+  .myHeader-contents button:hover {
+    border: 1px solid;
+  }
+  .myHeader-contents img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 200px) {
+  .mySlogan-container {
+    padding: 0;
+  }
+  .swiper-slide img {
+    max-height: 15vh;
+  }
+  .mySwiper-container {
+    width: 100%;
+  }
+  .mySwiper-container h2 {
+    font-size: 10vw;
+    margin: auto;
+    text-align: center;
+  }
+  .myGallery-wrapper h4 {
+    font-size: 10vw;
+    margin: auto;
+    text-align: center;
+  }
+  .myGallery-wrapper a {
+    font-size: 8vw;
+  }
+  .mySwiper-container a {
+    font-size: 8vw;
+  }
+}
+@media only screen and (max-width: 160px) {
+  .myWhyUs-title h2 {
+    font-size: 15vw;
+  }
+  .myWhyUs-item p {
+    font-size: 8vw;
+  }
+  .myWhyUs-item img {
+    width: 25vw;
+  }
+  .myWhyUs-item h3 {
+    font-size: 10vw;
+  }
+
+  .swiper-slide img {
+    max-height: 5vh;
+  }
+}

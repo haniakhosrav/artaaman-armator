@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if(error.length > 0) { %> 
+        <p style="background-color: red;"><%= error %> </p> 
+    <% } %>  
+    <h1>پنل ادمین</h1>
+    <a href="/">مشاهده ی وبسایت</a>
+    <p>افزودن مقاله جدید</p>
+    <form action="/handlenews" method="post" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="عنوان مقاله"><br><br>
+        <textarea name="desc" placeholder="توضیحات مقاله"></textarea> <br>
+        <label for="image">افزودن عکس</label>
+        <input type="file" id="image" name="image"><br>
+        <button type="submit"> افزودن مقاله</button>
+    </form>
+</body>
+</html>

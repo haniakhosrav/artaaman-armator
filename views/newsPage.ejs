@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="آرماتورهای استاپ موشن مخصوص انیمیت و آموزش">
+  <meta name="keywords" content="آرماتور,  استاپموشن, انیمیت">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="/css/aos.css">
+  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/responsiv.css">
+  <link rel="stylesheet" href="/css/newsPage.css">
+
+
+  <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+
+
+  <title>News</title>
+</head>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                 NAVBAR                                  -->
+  <!-- ----------------------------------------------------------------------- -->
+
+  <!-- ----------------------------- NAVBAR-TITLE ------------------------------ -->
+  <div class="extNav-container" >
+    <script src="/layouts/nav.js"></script>
+    </div>
+
+<!-- ----------------------------------------------------------------------- -->
+<!--                                NEWS-PART                                -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="mainWrapper">
+  <div class="content-wrapper">
+  
+    <% if(news.length > 0) { %> 
+      <% news.forEach(article => { %>
+        <div class="news-card" id="newsCard-1" >
+          <a href="#" class="news-card__card-link"></a>
+          <img src="<%= article.img %>"  alt="" class="news-card__image">
+          <div class="news-card__text-wrapper">
+            <h2 class="news-card__title"><%= article.title %> </h2>
+            <div class="news-card__post-date"><%= article.createdAt %> </div>
+            <div class="news-card__details-wrapper">
+              <a href="/news/<%= article._id %> " class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+            </div>
+          </div>
+        </div>
+      <% }) %> 
+    <% } %>  
+  
+    <!-- <div class="news-card" id="newsCard-2">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (2).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">استاپ-موشن چیست؟</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="news-card" id="newsCard-3">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (3).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">انواع استاپ-موشن</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="news-card" id="newsCard-4">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (4).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">حضور آرتامن در دوازدهمین جشنواره پویانمایی ایران</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله ولوژی مورد نیاز و کاربردهای متنوع</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="news-card" id="newsCard-5">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (5).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">چگونه مدل بسازیم؟</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="news-card" id="newsCard-6">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (6).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">لوازم مورد نیاز برای ساخت استاپ-موشن</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله د</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="news-card" id="newsCard-7">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (6).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">لوازم مورد نیاز برای ساخت استاپ-موشن</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله د</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="news-card" id="newsCard-8">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="/images/NEWS/news-00 (4).jpg" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">حضور آرتامن در دوازدهمین جشنواره پویانمایی ایران</h2>
+        <div class="news-card__post-date">10 اسفند 1400</div>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله ولوژی مورد نیاز و کاربردهای متنوع</p>
+          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                 FOOTER                                  -->
+  <!-- ----------------------------------------------------------------------- -->
+  <div class="extFoot-container">
+    <script src="/layouts/footer.js"></script>
+   </div>
+   
+   <script>
+var contents=[
+  {
+    id:"newsCard-1",
+    title:"hi"
+  },
+  { id:"newsCard-2",
+    title:"bye"},
+  { id:"newsCard-3",
+    title:"bye"},
+  { id:"newsCard-4",
+    title:"bye"},
+  { id:"newsCard-5",
+    title:"bye"},
+  { id:"newsCard-6",
+    title:"bye"},
+  { id:"newsCard-7",
+    title:"bye"},
+  { id:"newsCard-8",
+    title:"bye"},
+]
+
+     var newsCard = document.getElementsByClassName('news-card');
+     var newsCardLengh= newsCard.length;
+    //  console.log(newsCardLengh);
+
+for(var i=0; i<newsCardLengh; i++){
+// newsCard[i].onclick = handleClick;
+// console.log(newsCard[i].id);
+ newsCard[i].addEventListener("click", loadCard);
+
+
+}
+
+
+     function loadCard(){
+// window.open("singleNewsPage.html")
+console.log(this.id);
+// var newsCardId= ;
+// if(contents[i].id==this.id){
+//   alert(contents[i].title)
+// }
+
+}
+
+//      for(var x of contents){
+//   alert( contents[x].title)
+// }
+// console.log(contents[i].title);
+
+
+   </script>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                 SCRIPTS                                 -->
+  <!-- ----------------------------------------------------------------------- -->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/aos.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>
