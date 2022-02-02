@@ -16,6 +16,7 @@
   .myNavbar-contents {
     width: 8%;
   }
+  
 }
 @media only screen and (max-width: 760px) {
   .myWhyUs-item {
@@ -67,6 +68,11 @@
   .mySocialLinks{
     width: 100%;
   }
+
+
+  .myAboutPage-outerPart {
+    padding: 4rem 2rem;
+  }
 }
 @media only screen and (max-width: 425px) {
   .accordion {
@@ -109,6 +115,15 @@
   .owl-theme .owl-dots .owl-dot {
     zoom: 0.8;
   }
+  .myAboutPage-innerPart {
+    padding: .5rem 2rem;
+  }
+  .myAboutPage-innerPart section{
+padding-right: 1rem;
+border-right: none;
+border-top: var(--yallow-mid) 2px solid;
+padding-top: .5rem;
+  }
 }
 @media only screen and (max-width: 300px) {
   #myNavbar-logo svg {
@@ -146,6 +161,12 @@
   .myHeader-contents img {
     width: 100%;
   }
+  .myAboutPage-innerPart {
+    padding: .5rem 1rem;
+  }
+  .myAboutPage-outerPart {
+    padding: 4rem 1rem;
+  }
 }
 @media only screen and (max-width: 200px) {
   .mySlogan-container {
@@ -172,6 +193,10 @@
   }
   .mySwiper-container a {
     font-size: 8vw;
+  }
+
+  .myAboutPage-outerPart {
+    padding: 4rem 0;
   }
 }
 @media only screen and (max-width: 160px) {
