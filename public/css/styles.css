@@ -1130,18 +1130,18 @@ footer h5 {
 /* -------------------------------------------------------------------------- */
 /*                                 ABOUT-PAGE                                 */
 /* -------------------------------------------------------------------------- */
-.myAboutPage-outerPart {
+.outerPart {
   background-color: var(--grey-light);
   min-height: 70vh;
   padding: 4rem 6rem;
   text-align: center;
 }
-.myAboutPage-outerPart header h1{
+.outerPart header h1{
   margin-bottom: 2rem;
   padding-top: 4rem;
 }
 
-.myAboutPage-innerPart {
+.innerPart {
   /* display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1156,9 +1156,9 @@ footer h5 {
   color:var(--grey-mid)
 }
 
-.myAboutPage-innerPart header {
+.innerPart header {
 }
-.myAboutPage-innerPart section {
+.innerPart section {
     margin-top: 1rem;
   border-right: var(--yellow-light) 2px solid;
   padding-right: 2rem;

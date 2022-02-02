@@ -70,7 +70,7 @@
   }
 
 
-  .myAboutPage-outerPart {
+  .outerPart {
     padding: 4rem 2rem;
   }
 }
@@ -115,10 +115,10 @@
   .owl-theme .owl-dots .owl-dot {
     zoom: 0.8;
   }
-  .myAboutPage-innerPart {
+  .innerPart {
     padding: .5rem 2rem;
   }
-  .myAboutPage-innerPart section{
+  .innerPart section{
 padding-right: 1rem;
 border-right: none;
 border-top: var(--yallow-mid) 2px solid;
@@ -161,10 +161,10 @@ padding-top: .5rem;
   .myHeader-contents img {
     width: 100%;
   }
-  .myAboutPage-innerPart {
+  .innerPart {
     padding: .5rem 1rem;
   }
-  .myAboutPage-outerPart {
+  .outerPart {
     padding: 4rem 1rem;
   }
 }
@@ -195,7 +195,7 @@ padding-top: .5rem;
     font-size: 8vw;
   }
 
-  .myAboutPage-outerPart {
+  .outerPart {
     padding: 4rem 0;
   }
 }
