@@ -1,5 +1,10 @@
 document.write(
  `
+ <div class="preloader"> 
+    <img class="preloader-icon" src="/images/pointsIcon-01.svg" alt="My Site Preloader">
+  <p>  صفحه درحال بارگذاری است، لطفاً چند لحظه صبر کنید</p>  
+  </div>
+
  <nav class="myNavbar">
  <div class="mainWrapper">
    <a href="#" id="myNavbar-logo">
