@@ -1,22 +1,22 @@
 document.write(`
 <footer class="myFooter-wrapper">
 <section class="myFooter-container mainWrapper ">
-  <div class="myFooter-right">
-    <img src="images/logo-grey.svg" alt="">
+  <div data-aos="fade-up" class="myFooter-right">
+    <img src="/images/logo-grey.svg" alt="">
     <h2> <strong> خلاقیت</strong> را با ما تجربه کنید</h2>
   </div>
   <a class="myFooter-copyRight" href="">
     copyright by artaman
   </a>
-  <h5  class="myFooter-titles">
+  <h5 data-aos="fade-up" data-aos-delay="50" class="myFooter-titles">
     <span class="iconify" data-icon="ant-design:phone-filled" data-width="25"></span>
     اطلاعات تماس
   </h5>
-  <h5 class="myFooter-titles">
+  <h5 data-aos="fade-up" data-aos-delay="100" class="myFooter-titles">
     <span class="iconify" data-icon="ci:location" data-width="25"></span>
     آدرس
   </h5>
-  <div class="myFooter-phones" >
+  <div class="myFooter-phones" data-aos="fade-up" data-aos-delay="50">
     <a href="tel:00982637850451">
       026-37850451
     </a>
@@ -39,7 +39,7 @@ document.write(`
       <i data-width="25" class="iconify" data-icon="ant-design:mail-outlined"></i>
     </a>
   </div>
-  <p class="myFooter-address" ">
+  <p class="myFooter-address" data-aos="fade-up" data-aos-delay="100">
     کرج، ماهدشت، شهرک صنعتی پیام، خیابان سرداران، خیابان ششم شمالی، پلاک 16
   </p>
   <a class="myFooter-emailAddress" href="mailto:artaamane@gmail.com">
