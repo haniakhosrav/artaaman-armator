@@ -84,6 +84,7 @@
   /*     background-color: rgba(0, 0, 0, 0.4); */
   transition: background-color 1.5s ease;
   direction: rtl;
+  width: 100%;
 }
 
 .news-card__title {
