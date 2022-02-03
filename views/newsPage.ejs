@@ -26,6 +26,7 @@
 
   <title>News</title>
 </head>
+<body>
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 NAVBAR                                  -->
@@ -45,7 +46,7 @@
     <% if(news.length > 0) { %> 
       <% news.forEach(article => { %>
         <div class="news-card" id="newsCard-1" >
-          <a href="#" class="news-card__card-link"></a>
+          <a href="/news/<%= article._id %> " class="news-card__card-link"></a>
           <img src="<%= article.img %>"  alt="" class="news-card__image">
           <div class="news-card__text-wrapper">
             <h2 class="news-card__title"><%= article.title %> </h2>
@@ -152,62 +153,10 @@
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 FOOTER                                  -->
   <!-- ----------------------------------------------------------------------- -->
-  <div class="extFoot-container">
+
     <script src="/layouts/footer.js"></script>
-   </div>
-   
-   <script>
-var contents=[
-  {
-    id:"newsCard-1",
-    title:"hi"
-  },
-  { id:"newsCard-2",
-    title:"bye"},
-  { id:"newsCard-3",
-    title:"bye"},
-  { id:"newsCard-4",
-    title:"bye"},
-  { id:"newsCard-5",
-    title:"bye"},
-  { id:"newsCard-6",
-    title:"bye"},
-  { id:"newsCard-7",
-    title:"bye"},
-  { id:"newsCard-8",
-    title:"bye"},
-]
-
-     var newsCard = document.getElementsByClassName('news-card');
-     var newsCardLengh= newsCard.length;
-    //  console.log(newsCardLengh);
-
-for(var i=0; i<newsCardLengh; i++){
-// newsCard[i].onclick = handleClick;
-// console.log(newsCard[i].id);
- newsCard[i].addEventListener("click", loadCard);
-
-
-}
-
-
-     function loadCard(){
-// window.open("singleNewsPage.html")
-console.log(this.id);
-// var newsCardId= ;
-// if(contents[i].id==this.id){
-//   alert(contents[i].title)
-// }
-
-}
-
-//      for(var x of contents){
-//   alert( contents[x].title)
-// }
-// console.log(contents[i].title);
-
-
-   </script>
+ 
+ 
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 SCRIPTS                                 -->

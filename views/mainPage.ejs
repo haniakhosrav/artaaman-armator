@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/responsiv.css">
 
-  
+
   <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
 
@@ -26,6 +26,13 @@
 </head>
 
 <body>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                                PRELODER                                 -->
+  <!-- ----------------------------------------------------------------------- -->
+  <div class="preloader"> 
+    <img class="preloader-icon" src="/images/pointsIcon-01.svg" alt="My Site Preloader">
+  <p>  صفحه درحال بارگذاری است، لطفاً چند لحظه صبر کنید</p>  
+  </div>
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 NAVBAR                                  -->
@@ -60,19 +67,19 @@
           <p>خانه</p>
         </a>
       </li>
-      
+
       <li class="myNavbar-item">
         <a href="/gallery">
-          <span class="iconify" data-width="20" data-icon="grommet-icons:gallery"></span>       
-             <p>گالری</p>
+          <span class="iconify" data-width="20" data-icon="grommet-icons:gallery"></span>
+          <p>گالری</p>
         </a>
-        <li class="myNavbar-item">
-          <a href="/news">
-            <span class="iconify" data-icon="emojione-monotone:rolled-up-newspaper" data-width="28"
-              data-height="30"></span>
-            <p>اخبار و مقالات</p>
-          </a>
-        </li>
+      <li class="myNavbar-item">
+        <a href="/news">
+          <span class="iconify" data-icon="emojione-monotone:rolled-up-newspaper" data-width="28"
+            data-height="30"></span>
+          <p>اخبار و مقالات</p>
+        </a>
+      </li>
       </li>
       <li class="myNavbar-item">
         <a href="/contact">
@@ -86,7 +93,7 @@
           <p>درباره‌ی ما</p>
         </a>
       </li>
-     
+
 
     </ul>
   </div>
@@ -100,7 +107,7 @@
       <img class="myHeader-titleImg" src="/images/headerlogo.svg" alt="artaman logo + artaman title"
         data-aos="fade-down">
       <h1 data-aos="fade-up">تنها تولیدکننده‌ی صنعتی آرماتورهای فلزی در ایران</h1>
-      <button class="hvr-ripple-in"  onclick="window.location.href='/contact'">تماس با ما</button>
+      <button class="hvr-ripple-in" onclick="window.location.href='/contact'">تماس با ما</button>
     </div>
   </header>
 
@@ -142,7 +149,7 @@
   <!-- ----------------------------------------------------------------------- -->
   <section class="mySwiper-container ">
     <h2>
-    گالری تصاویر
+      گالری تصاویر
     </h2>
     <div data-aos="fade-up">
       <div class="swiper mySwiper2 ">
@@ -213,8 +220,8 @@
           </div>
         </div>
       </div>
-       <br>
-        <a class="myMore" href="/gallery">بیشتر</a>
+      <br>
+      <a class="myMore" href="/gallery">بیشتر</a>
 
     </div>
     <!-- <a href="galleryPage.html">بیشتر...</a> -->
@@ -230,6 +237,8 @@
         <br>
         <a class="myMore" href="/about">بیشتر</a>
       </p>
+      <img src="images/pointsIcon-05.svg" alt="armature's part">
+      <img src="images/pointsIcon-02.svg" alt="armature's part">
     </div>
     </div>
   </section>
@@ -239,15 +248,15 @@
   <section class="myGallery-wrapper ">
     <h4>
       نقشه ها
-  </h4>
+    </h4>
     <div data-aos="fade-up" class="myGallery-container">
       <input id="item1" type="checkbox" />
       <label class="item1" for="item1"
         style="background-image:url(images/MAP/WhatsApp\ Image\ 2021-12-12\ at\ 1.19.53\ AM.jpeg);">
       </label>
       <input id="item2" type="checkbox" />
-      <label class="item2" for="item2" 
-      style="background-image:url('/images/MAP/WhatsApp\ Image\ 2021-12-12\ at\ 1.19.53\ AM\ \(1\).jpeg')">
+      <label class="item2" for="item2"
+        style="background-image:url('/images/MAP/WhatsApp\ Image\ 2021-12-12\ at\ 1.19.53\ AM\ \(1\).jpeg')">
       </label>
       <input id="item3" type="checkbox" />
       <label class="item3" for="item3"
@@ -285,7 +294,7 @@
   <!-- ----------------------------------------------------------------------- -->
   <section class="mySlogan-wrapper">
     <div class="mySlogan-container  mainWrapper">
-      <h2 data-aos="fade-up" ><strong>آرماتور</strong> دلخواه خود را بسازید</h2>
+      <h2 data-aos="fade-up"><strong>آرماتور</strong> دلخواه خود را بسازید</h2>
       <div class=" mySlogan-contents">
         <div class="mySlogan-contentsItem" data-aos="fade-left" data-aos-delay="50">
           <h3> بازی</h3>
@@ -293,31 +302,31 @@
         </div>
         <div class="mySlogan-contentsItem" data-aos="fade-left" data-aos-delay="100">
           <h3>آموزش</h3>
-          <img  src="/images/pointsIcon-04.svg" width="50em" alt="آیکون قطعات">
+          <img src="/images/pointsIcon-04.svg" width="50em" alt="آیکون قطعات">
         </div>
         <div class="mySlogan-contentsItem" data-aos="fade-left" data-aos-delay="150">
           <h3> انیمیت</h3>
           <img src="/images/pointsIcon-05.svg" width="40em" alt="آیکون قطعات">
         </div>
-    </div>
+      </div>
     </div>
   </section>
   <!-- ----------------------------------------------------------------------- -->
   <!--                                NEWS-GALLERY                                -->
   <!-- ----------------------------------------------------------------------- -->
   <section class="mySlideshow-wrapper">
-   <h4>
+    <h4>
 
-       اخبار و مقالات
+      اخبار و مقالات
 
     </h4>
     <div class="owl-carousel owl-theme mainWrapper mySlideshow" id="newsSlideShow">
       <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
+        <a href="/singleNewsPage.ejs/">
         <img src="/images/logo-grey.svg" alt="news image">
         <div class="mySlideShow-info ">
           <small>محصولات</small>
           <h3>
-            <a href="newsSingle/newsSingle01.html">
               <span>آرماتورهای کودکان</span>
               <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
             </a>
@@ -325,11 +334,11 @@
         </div>
       </div>
       <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" data-aos-delay="100">
+        <a href="/singleNewsPage.ejs/">
         <img src="/images/logo-grey.svg" alt="news image">
         <div class="mySlideShow-info ">
           <small>اخبار</small>
           <h3>
-            <a href="project-detail.html">
               <span>گفتگو بامدیریت در جشنواره‌ی</span>
               <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
             </a>
@@ -337,11 +346,11 @@
         </div>
       </div>
       <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" data-aos-delay="200">
+        <a href="/singleNewsPage.ejs/">
         <img src="/images/logo-grey.svg" alt="news image">
         <div class="mySlideShow-info ">
           <small>آموزش</small>
           <h3>
-            <a href="project-detail.html">
               <span>تفاوت پکیجها و نحوه‌ی استفاده از آنها</span>
               <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
             </a>
@@ -349,11 +358,11 @@
         </div>
       </div>
       <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
+        <a href="/singleNewsPage.ejs/">
         <img src="/images/logo-grey.svg" alt="news image">
         <div class="mySlideShow-info ">
           <small>محصولات</small>
           <h3>
-            <a href="project-detail.html">
               <span>پکهای ویژه هنری</span>
               <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
             </a>
@@ -363,11 +372,11 @@
       <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
         <img src="/images/logo-grey.svg" alt="news image">
 
+        <a href="/singleNewsPage.ejs/">
         <div class="mySlideShow-info ">
           <small>Video</small>
 
           <h3>
-            <a href="project-detail.html">
               <span>Ultimate HealthCare</span>
               <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
             </a>
@@ -387,7 +396,7 @@
   <section class="myFqa-wrapper">
     <div class="myFqa-container mainWrapper">
       <h2>
-  سوالات متداول
+        سوالات متداول
       </h2>
       <div data-aos="fade-up" class="myAcordian-wrapper">
         <button class="accordion ">جنس آرماتورها از چیست؟</button>
@@ -445,8 +454,8 @@
         <a href="">
           <span class="iconify" data-icon="iconoir:telegram-circled" data-width="25"></span>
         </a>
-        <a href ="https://www.instagram.com/artaman_co/">
-        <span class="iconify" data-icon="lucide:instagram" data-width="25"></span>
+        <a href="https://www.instagram.com/artaman_co/">
+          <span class="iconify" data-icon="lucide:instagram" data-width="25"></span>
         </a>
         <a href="">
           <span class="iconify" data-icon="ic:twotone-whatsapp" data-width="28"></span>
