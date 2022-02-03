@@ -1124,9 +1124,7 @@ footer h5 {
   align-self: flex-end;
 }
 
-.myFooter-emailIcone {
-  /* display: none; */
-}
+
 /* -------------------------------------------------------------------------- */
 /*                                 ABOUT-PAGE                                 */
 /* -------------------------------------------------------------------------- */
@@ -1156,8 +1154,9 @@ footer h5 {
   color:var(--grey-mid)
 }
 
-.innerPart header {
-}
+
+
+
 .innerPart section {
     margin-top: 1rem;
   border-right: var(--yellow-light) 2px solid;
