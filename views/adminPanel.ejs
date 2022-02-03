@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+
+    <title>Admin Panel</title>
 </head>
 <body>
     <% if(error.length > 0) { %> 
         <p style="background-color: red;"><%= error %> </p> 
-    <% } %>  
+    <% } %> 
+    <% if(success.length > 0) { %> 
+        <p style="background-color: rgb(70, 168, 46);"><%= success %> </p> 
+    <% } %> 
     <h1>پنل ادمین</h1>
     <a href="/">مشاهده ی وبسایت</a>
-    <p>افزودن مقاله جدید</p>
+    <h1>افزودن مقاله جدید</h1>
     <form action="/handlenews" method="post" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="عنوان مقاله"><br><br>
         <textarea name="desc" placeholder="توضیحات مقاله"></textarea> <br>
@@ -20,5 +26,17 @@
         <input type="file" id="image" name="image"><br>
         <button type="submit"> افزودن مقاله</button>
     </form>
+    <div style="margin-top: 30px;">
+        <h1>لیست مقالات</h1>
+        <% news.forEach(article => { %>
+            <div id="edit" style="margin-bottom: 150px;">
+                <img style="height: 200px; width: 200px;" src="<%= article.img %>"> 
+                <p><%= article.title %></p>
+                <div><%= article.desc %> </div>
+                <a href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
+                <button onclick=""  style="display: inline-block;">ویرایش مقاله</button>
+            </div>
+        <% }) %> 
+    </div>
 </body>
 </html>
