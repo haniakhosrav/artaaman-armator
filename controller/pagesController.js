@@ -1,7 +1,13 @@
 const newsModel = require('../model/newsModel');
+const {formatDate} = require('../utils/jalali');
 
 //? loading homePage
-exports.getMain = (req, res) => res.render('mainPage');
+exports.getMain = async (req, res) => {
+    await newsModel
+    res.render('mainPage', {
+            
+    });
+}
 
 //? loading aboutPage
 exports.getAbout = (req, res) => res.render('aboutPage');
@@ -21,6 +27,7 @@ exports.getNews = async (req, res) => {
         res.render('newsPage', {
             news: news.reverse(),
             error: req.flash('err'),
+            formatDate,
         })
     } catch (err) {
         req.flash('err', 'مشکلی در ارتباط با سرور وجود دارد');

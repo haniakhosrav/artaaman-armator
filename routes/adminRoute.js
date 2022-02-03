@@ -6,7 +6,8 @@ const {
     handleAdminLogin,
     getAdminPanel,
     handleNews,
-    handleLoadingNews
+    handleLoadingNews,
+    deleteArticle
 } = require('../controller/adminController')
 
 const router = express.Router();
@@ -16,6 +17,7 @@ router.get('/adminpanel', getAdminPanel);
 router.post('/adminlogin', handleAdminLogin);
 router.post('/handlenews', upload.single('image'), handleNews);
 router.get('/news/:id', handleLoadingNews);
+router.get('/deletearticle/:id', deleteArticle)
 
 
 module.exports = router;
