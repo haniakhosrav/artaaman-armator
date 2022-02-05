@@ -97,7 +97,7 @@ $("#newsSlideShow").owlCarousel({
   loop: true,
   // center: true,
   autoplayHoverPause: true,
-  autoplay: false,
+  autoplay: true,
   margin: 20,
   merge: true,
   responsiveClass: true,
@@ -170,3 +170,25 @@ function clean() {
             this.className += " active";
           });
         }
+
+  /* -------------------------------------------------------------------------- */
+  /*                           SINGLRNESPAGE-CAROUSEL                           */
+  /* -------------------------------------------------------------------------- */
+  $("#relatedNews").owlCarousel({
+    rtl: true,
+    autoplay: false,
+    margin: 20,
+    merge: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      900: {
+        items: 3,
+      },
+    },
+  });
