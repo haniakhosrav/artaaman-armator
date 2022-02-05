@@ -124,7 +124,21 @@ strong {
   color: var(--yellow-dark);
   box-shadow: 0px -1px 3px rgb(210 208 208);
 }
+.myBackBtn{
 
+  padding: .5rem 1rem;
+    border-radius: 20px;
+    background-color: var(--grey-mid);
+    color: var(--white-color);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .myBackBtn:hover {
+  
+      background-color: var(--yellow-light);
+      color: var(--black-color);
+    }
+    
 /* Ripple In */
 @-webkit-keyframes hvr-ripple-in {
   100% {
@@ -792,7 +806,6 @@ top: 45%; */
   border-radius: 25px;
   padding-top: 4rem;
   padding-bottom: 1rem;
-  /* position: relative; */
   box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
 }
 .mySlogan-container h2 {
@@ -855,7 +868,7 @@ top: 45%; */
 
 .mySlideShow-itemWrapper img {
   border-radius: 20px;
-  box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
+  box-shadow: 2.1px 4.2px 4.2px rgba(85, 85, 85, 0.44);
   height: 200px;
   padding: 0.5rem;
   background-color: var(--grey-light);
@@ -873,20 +886,20 @@ top: 45%; */
 
 .mySlideShow-info small {
   font-family: "Shabnam-L";
-  color: var(--grey-mid);
+  color: var(--green-light);
   position: relative;
   top: 2px;
 }
 
 .mySlideShow-info a {
-  color: var(--green-dark);
+  color: var(--grey-dark);
   opacity: 0.7;
   font-size: 1rem;
   text-align: center;
 }
 
 .mySlideShow-info .mySlideShow-infoIcon {
-  background: var(--yellow-dark);
+  background: var(--yellow-light);
 }
 
 .mySlideShow-infoIcon {
@@ -896,8 +909,8 @@ top: 45%; */
   transform: translateY(-50%);
   border-radius: 50px;
   color: var(--white-color);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   line-height: 40px;
   text-align: center;
 }
@@ -905,14 +918,21 @@ top: 45%; */
   color: var(--white-color);
 }
 
-.mySlideshow-item:hover {
-  /* background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 0, 0)); */
-  transition: all 10ms;
-  /* animation: reveal 2s forwards; */
-  /* transform: translateX(-10px); */
-  transform: scale(0.98) !important;
+.mySlideshow-item:hover .mySlideShow-infoIcon{
+  transition: all ease-in 300ms;
+  left:2px;
+background-color: var(--yellow-dark);
 }
+.mySlideshow-item:hover .mySlideShow-info a{
+  transition: all ease-in 300ms;
+  color: var(--black-color);
 
+}
+.mySlideshow-item:hover .mySlideShow-info small{
+  transition: all ease-in 300ms;
+    color: var(--green-dark);
+
+}
 .owl-theme .owl-dots .owl-dot {
   outline: none;
 }
@@ -926,7 +946,7 @@ top: 45%; */
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: var(--yellow-dark);
+  background: var(--yellow-light);
 }
 
 .mySlideshow-item {
@@ -983,7 +1003,7 @@ top: 45%; */
 .accordion {
   background-color: transparent;
   cursor: pointer;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   border: none;
   text-align: right;
@@ -991,11 +1011,12 @@ top: 45%; */
   font-size: 18px;
   transition: 0.4s;
   font-family: "Shabnam-Bold";
+  color: var(--grey-dark);
 }
 
 .accordion:after {
   content: "\002B";
-  color: #777;
+  color: var(--green-mid);
   font-weight: bold;
   float: left;
   margin-left: 5px;
@@ -1012,6 +1033,7 @@ top: 45%; */
   overflow: hidden;
   transition: 0.2s ease-out;
   font-size: 17px;
+  color: var(--black-color);
 }
 .panel p {
   direction: rtl;
@@ -1124,71 +1146,3 @@ footer h5 {
   align-self: flex-end;
 }
 
-
-/* -------------------------------------------------------------------------- */
-/*                                 ABOUT-PAGE                                 */
-/* -------------------------------------------------------------------------- */
-.outerPart {
-  background-color: var(--grey-light);
-  min-height: 70vh;
-  padding: 4rem 6rem;
-  text-align: center;
-}
-.outerPart header h1{
-  margin-bottom: 2rem;
-  padding-top: 4rem;
-}
-
-.innerPart {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  text-align: right;
-  background-color: var(--white-color);
-  /* padding: 1rem 4rem; */
-  box-shadow: 1px 1px 3px rgb(210 208 208);
-  padding: .5rem 4rem;
-  margin: 1rem;
-  border-radius: 25px;
-  color:var(--grey-mid)
-}
-
-
-
-
-.innerPart section {
-    margin-top: 1rem;
-  border-right: var(--yellow-light) 2px solid;
-  padding-right: 2rem;
-  color: #000000;
-  padding-bottom: .5rem;
-}
-
-
-/* -------------------------------------------------------------------------- */
-/*                               CONTACT-US-PAGE                              */
-/* -------------------------------------------------------------------------- */
-.myContentPage-outerPart{
-  direction: rtl;
-}
-.myContentPage-outerPart .iconify, .myContentPage-outerPart a{
-  color: var(--grey-mid);
-}
-.myContentPage-outerPart a:hover{
-  color:var(--yallow-mid);
-}
-.myContentPage-outerPart a:visited, .myContentPage-outerPart a:visited .iconify{
-  color:var(--green-mid);
-}
-.myContentPage-outerPart a:hover{
-  color:var(--yallow-mid);
-}
-.myContentPage-iconify {
-display: flex;
-justify-content: space-between;
-}
-.myContentPage-phoneNumbers  a{
-font-family: 'Shabnam-DG-N';
-white-space: nowrap;
-}

@@ -18,6 +18,15 @@
   }
   
 }
+
+@media only screen and (max-width: 768px) {
+  .myArticle {
+    width: 90%;
+    padding: 1.5rem 2rem;
+
+  }
+}
+
 @media only screen and (max-width: 760px) {
   .myWhyUs-item {
     width: 12em;
@@ -36,6 +45,17 @@
   }
   .myFqa-container {
     padding: 3rem;
+  }
+  .outerPart{
+    padding: 4rem 4rem;
+  }
+  .myArticle{
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 681px) {
+  .mySectionCol{
+    /* display: block; */
   }
 }
 @media only screen and (max-width: 600px) {
@@ -69,9 +89,19 @@
     width: 100%;
   }
 
-
+ 
   .outerPart {
     padding: 4rem 2rem;
+  }
+ /* .myContentPage  .myArticle{
+    padding:.5rem 2rem;
+  } */
+  .myContentPage .myArticle h3{
+    /* color: var(--grey-dark);
+    margin-right: 2rem;
+    white-space: nowrap; */
+    padding-bottom: 1rem;
+  
   }
 }
 @media only screen and (max-width: 425px) {
@@ -110,19 +140,38 @@
     width: 90%;
     font-size: 80%;
   }
+  .mySection{
+    /* padding-right: 0; */
+    /* border-right: none;
+    border-top: var(--yallow-mid) 2px solid;
+    padding-top: .5rem; */
+      }
+    
+
 }
 @media only screen and (max-width: 375px) {
   .owl-theme .owl-dots .owl-dot {
     zoom: 0.8;
   }
-  .innerPart {
-    padding: .5rem 2rem;
+  .myArticle {
+    /* padding: .5rem 2rem; */
+    text-align: center;
   }
-  .innerPart section{
-padding-right: 1rem;
+  .mySection{
+padding-right: 0;
 border-right: none;
 border-top: var(--yallow-mid) 2px solid;
 padding-top: .5rem;
+text-align: center;
+  }
+  .myContentPage .myArticle h3{ margin-right: 0;}
+  .myContentPage .mySectionCol{
+    width: 100%;
+    text-align: center;
+  }
+  .myContentPage .myAlignIcon{
+    width: 100%;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 300px) {
@@ -144,6 +193,7 @@ padding-top: .5rem;
   .myAboutUs-container h2 {
     margin: 0 auto;
   }
+
 }
 @media only screen and (max-width: 305px) {
   .myHeader-contents h1 {
@@ -161,12 +211,21 @@ padding-top: .5rem;
   .myHeader-contents img {
     width: 100%;
   }
-  .innerPart {
-    padding: .5rem 1rem;
+  .myArticle {
+    /* padding: .5rem 1rem; */
+    width: 100%;
+  
+  }
+  .mySection{
+    /* width: 90%; */
+    margin: auto 0;
+    padding: auto 0;
   }
   .outerPart {
-    padding: 4rem 1rem;
+    padding: 4rem 0;
   }
+    
+
 }
 @media only screen and (max-width: 200px) {
   .mySlogan-container {
@@ -195,9 +254,10 @@ padding-top: .5rem;
     font-size: 8vw;
   }
 
-  .outerPart {
-    padding: 4rem 0;
+  .myArticle{
+    padding: 0;
   }
+
 }
 @media only screen and (max-width: 160px) {
   .myWhyUs-title h2 {

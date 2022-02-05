@@ -1,0 +1,100 @@
+/* -------------------------------------------------------------------------- */
+/*                                 BOTH-PAGES                                 */
+/* -------------------------------------------------------------------------- */
+
+.outerPart {
+  background-color: var(--grey-light);
+  min-height: 70vh;
+  padding: 4rem 6rem;
+  text-align: center;
+  direction: rtl;
+  font-family: "Shabnam-DG-N";
+}
+.myMainTitle {
+  margin-bottom: 2rem;
+  padding-top: 4rem;
+}
+
+.myArticle {
+  text-align: right;
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 3px rgb(210 208 208);
+  padding: 3rem 4rem;
+  margin: 1rem;
+  border-radius: 25px;
+  width: 80%;
+  margin: 1rem auto;
+}
+.myArticle:last-of-type {
+    margin-bottom: 3rem;
+  }
+.myAlignIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mySection {
+  margin-top: 1rem;
+  border-right: var(--yellow-dark) 2px solid;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+}
+.mySectionRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mySectionCol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               CONTACT-US-PAGE                              */
+/* -------------------------------------------------------------------------- */
+.myContentPage h3,
+.myContentPage strong {
+  color: var(--grey-dark);
+}
+.myContentPage .iconify,
+.myContentPage h4 {
+  color: var(--yellow-light);
+}
+
+.myContentPage .myArticle a,
+.myContentPage .mySection a {
+  color: var(--green-light);
+  font-weight: 400;
+  white-space: nowrap;
+  font-family: "Shabnam-DG-B";
+}
+.myContentPage .myArticle a:visited {
+  color: var(--green-dark);
+}
+.myContentPage .myArticle a:hover {
+  color: var(--yellow-dark);
+}
+
+.myArticle h3 {
+  margin-right: 2rem;
+  white-space: nowrap;
+  padding-bottom: 2rem;
+}
+
+.myContentPage h4 {
+  margin: 1rem 0;
+  width: 100%;
+}
+.myContentPage .mySection p {
+  padding-top: 0.5rem;
+  color: var(--green-mid);
+}
+.myContentPage .myArticle .mySectionDetails p,
+.myContentPage .myArticle .mySectionDetails {
+  color: var(--grey-mid);
+}
+.myContentPage .mySectionCol {
+  align-items: center;
+  padding-bottom: 1rem;
+}

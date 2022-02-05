@@ -182,7 +182,7 @@ text-align: right;
 padding: 4rem;
 direction: rtl;
 }
-.myNews-innerPart {
+.myNews-myArticle {
   position: relative;
   background-color: white;
   /* width: 90%; */
@@ -217,7 +217,7 @@ max-width: 50%;
     .myNews-figureCapion{
       max-width: 100%;
     }
-    .myNews-innerPart {
+    .myNews-myArticle {
    
       padding: .5rem;
 
