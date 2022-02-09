@@ -36,19 +36,28 @@ exports.handleAdminLogin = (req, res) => {
 //? sending news 
 
 exports.handleNews = async (req, res) => {
-    const {title, desc} = req.body;
+    let image;
+    const {title, desc, label} = req.body;
 
     if(!title || !desc) {
         req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
         return res.redirect('/adminpanel');
     }
+    
+    if(!label) {
+        req.flash('error', 'لطفا دسته بندی مقاله را قرار دهید');
+        return res.redirect('/adminpanel');
+    }
+
+    if(req.file == undefined) image = '/images/logo-grey.svg';
+    else image = req.file.path.replace(/\134/g,"/").slice(6);
 
     try {
-        await newsModel.create({title, desc, img: req.file.path.replace(/\134/g,"/").slice(6)});
-        console.log(req.file.path.replace(/\134/g,"/").slice(6))
+        console.log(req.file)
+        await newsModel.create({title, desc, label, img: image});
         res.redirect('/news');
     } catch (err) {
-        req.flash('error', 'مشکلی در برقراری ارتباط با سرور وجود دارد ممکن است به دلیل این باشد که عکسی انتخاب نکرده اید');
+        req.flash('error', 'مشکلی در برقراری ارتباط با سرور وجود دارد');
         res.redirect('/adminpanel');
     }
 }
