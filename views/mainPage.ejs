@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/aos.css">
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
 
 
   <link rel="stylesheet" href="/css/styles.css">
@@ -159,7 +159,6 @@
       <a class="myMore" href="/gallery">بیشتر</a>
 
     </div>
-    <!-- <a href="galleryPage.html">بیشتر...</a> -->
   </section>
   <!-- ----------------------------------------------------------------------- -->
   <!--                                ABOUT-US                                 -->
@@ -251,13 +250,11 @@
   <!-- ----------------------------------------------------------------------- -->
   <section class="mySlideshow-wrapper">
     <h4>
-
-      اخبار و مقالات
-
+       اخبار و مقالات
     </h4>
     <div class="owl-carousel owl-theme mainWrapper mySlideshow" id="newsSlideShow">
       <% last.forEach(article => { %>
-        <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
+        <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" >
           <a href="news/<%= article._id %>">
           <img src="<%= article.img %> " alt="news image">
           <div class="mySlideShow-info ">
@@ -367,7 +364,8 @@
   <!--                                 SCRIPTS                                 -->
   <!-- ----------------------------------------------------------------------- -->
   <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="/js/swiper-bundle.min.js"></script>
   <script src="/js/jquery.min.js"></script>
   <script src="/js/aos.js"></script>
   <script src="/js/owl.carousel.min.js"></script>
