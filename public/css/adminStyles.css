@@ -1,0 +1,162 @@
+@font-face {
+    font-family: "Shabnam-Normal";
+    src: url("../fonts/Shabnam.eot"), url("../fonts/Shabnam.woff") format("woff"),
+      url("../fonts/Shabnam.ttf") format("truetype");
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "Shabnam-Bold";
+    src: url("../fonts/Shabnam-Bold.eot"),
+      url("../fonts/Shabnam-Bold.woff") format("woff"),
+      url("../fonts/Shabnam-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-weight: 500;
+  }
+
+  body {
+      font-family: "Shabnam-Normal" !important;
+  }
+
+
+#clicked {
+    display: inline-block;
+}
+
+#close {
+  display: none;
+}
+
+.editArticle, .addNewArticle {
+    position: fixed;
+    top: 50px;
+    bottom: 20px;
+    right: 80px;
+    left: 80px;
+    overflow: auto;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    z-index: 1;
+    display: none;
+    background: #e3ecec !important;
+    direction: rtl;
+    box-shadow: 0px 0px 20px -3px;
+}
+
+
+.closeTab {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.eachArticle {
+  border: 1.5px solid #febf50;
+  border-radius: 10px;
+  width: 70vw;
+  height: 35vh;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
+
+.desc {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  text-align: right;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.addNewOne {
+  position: sticky;
+  top: 0;
+  background-color: #214E43;
+  text-align: center;
+  z-index: 1;
+}
+
+.articleImg {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.deleteBtn {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.editBtn {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #214E43;
+}
+
+.addBtn {
+  background: #214E43;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .eachArticle {
+    width: 85vw;
+  }
+  .desc {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+  }
+  .title {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+  }
+}
+
+@-webkit-keyframes animatezoom {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+  
+@keyframes animatezoom {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgb(179, 175, 175); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6969; 
+}
