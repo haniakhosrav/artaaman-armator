@@ -48,9 +48,10 @@
     /* max-width: 100%; */
     max-height: 80vh;
     max-width: 100%;
+    min-width: 51%
   }
     .myNews-figureCapion{
-    max-width: 82%;
+   width: 82%;
     margin: 0 auto;
     margin-top: 2rem;
     font-size: 20px;
@@ -59,7 +60,6 @@
     column-gap: 7%;
     text-justify: inter-word;
     text-align: justify;
-  
     
   }
   .shareIcones {
