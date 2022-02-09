@@ -1,14 +1,6 @@
 const newsModel = require('../model/newsModel');
 const {formatDate} = require('../utils/jalali');
 
-//? loading homePage
-exports.getMain = async (req, res) => {
-    await newsModel
-    res.render('mainPage', {
-            
-    });
-}
-
 //? loading aboutPage
 exports.getAbout = (req, res) => res.render('aboutPage');
 
@@ -19,7 +11,6 @@ exports.getContact = (req, res) => res.render('contactPage');
 exports.getGallery = (req, res) => res.render('galleryPage');
 
 //? loading news page
-
 exports.getNews = async (req, res) => {
 
     try {
@@ -33,4 +24,13 @@ exports.getNews = async (req, res) => {
         req.flash('err', 'مشکلی در ارتباط با سرور وجود دارد');
         res.redirect('/');
     }
+}
+
+//? loading homePage
+exports.getMain = async (req, res) => {
+    const articles = await newsModel.find();
+    const last10Articles = articles.reverse().slice(0, 10);
+    res.render('mainPage', {
+          last: last10Articles,
+    });
 }

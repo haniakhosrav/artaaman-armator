@@ -256,19 +256,21 @@
 
     </h4>
     <div class="owl-carousel owl-theme mainWrapper mySlideshow" id="newsSlideShow">
-      <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
-        <a href="/singleNewsPage.ejs/">
-        <img src="/images/logo-grey.svg" alt="news image">
-        <div class="mySlideShow-info ">
-          <small>تاریخ</small>
-          <h3>
-              <span>آرماتورهای کودکان</span>
-              <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
-            </a>
-          </h3>
+      <% last.forEach(article => { %>
+        <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up">
+          <a href="news/<%= article._id %>">
+          <img src="<%= article.img %> " alt="news image">
+          <div class="mySlideShow-info ">
+            <small><%= article.label %> </small>
+            <h3>
+                <span><%= article.title %> </span>
+                <span class="iconify mySlideShow-infoIcon" data-icon="dashicons:arrow-left-alt2"></span>
+              </a>
+            </h3>
+          </div>
         </div>
-      </div>
-      <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" data-aos-delay="100">
+      <% }) %>  
+      <!-- <div class="mySlideshow-item mySlideShow-itemWrapper" data-aos="fade-up" data-aos-delay="100">
         <a href="/singleNewsPage.ejs/">
         <img src="/images/logo-grey.svg" alt="news image">
         <div class="mySlideShow-info ">
@@ -317,7 +319,7 @@
             </a>
           </h3>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="myMore-center"><a class="myMore" href="/news">بیشتر</a></div>

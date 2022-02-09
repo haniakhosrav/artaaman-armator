@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const newsSchema = mongoose.Schema({
     title: String,
     desc: String,
+    label: String,
     img: String,
     createdAt: {
         type: Date,

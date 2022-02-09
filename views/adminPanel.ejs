@@ -1,42 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
 
-    <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Admin Panel</title>
-</head>
-<body>
-    <% if(error.length > 0) { %> 
-        <p style="background-color: red;"><%= error %> </p> 
-    <% } %> 
-    <% if(success.length > 0) { %> 
-        <p style="background-color: rgb(70, 168, 46);"><%= success %> </p> 
-    <% } %> 
-    <h1>پنل ادمین</h1>
-    <a href="/">مشاهده ی وبسایت</a>
-    <h1>افزودن مقاله جدید</h1>
-    <form action="/handlenews" method="post" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="عنوان مقاله"><br><br>
-        <textarea name="desc" placeholder="توضیحات مقاله"></textarea> <br>
-        <label for="image">افزودن عکس</label>
-        <input type="file" id="image" name="image"><br>
-        <button type="submit"> افزودن مقاله</button>
-    </form>
-    <div style="margin-top: 30px;">
-        <h1>لیست مقالات</h1>
-        <% news.forEach(article => { %>
-            <div id="edit" style="margin-bottom: 150px;">
-                <img style="height: 200px; width: 200px;" src="<%= article.img %>"> 
-                <p><%= article.title %></p>
-                <div><%= article.desc %> </div>
-                <a href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
-                <button onclick=""  style="display: inline-block;">ویرایش مقاله</button>
-            </div>
-        <% }) %> 
-    </div>
-</body>
+        <link rel="stylesheet" href="/css/adminStyles.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+        <link rel="icon" type="image/x-icon" href="/images/logo.svg">
+
+        <title>Admin Panel</title>
+
+    </head>
+    <body>
+
+        <!-- *************************************************************** -->
+        <!-- *************************** MESSAGES ************************** -->
+        <!-- *************************************************************** -->
+
+        <% if(error.length > 0) { %> 
+            <p style="background-color: red;"><%= error %> </p> 
+        <% } %>
+
+        <% if(success.length > 0) { %> 
+            <p style="background-color: rgb(70, 168, 46);"><%= success %> </p> 
+        <% } %> 
+
+        <!-- *************************************************************** -->
+        <!-- ************************ ADD NEW ARTICLE ********************** -->
+        <!-- *************************************************************** -->
+
+        <div class="addNewOne">
+            <h1 class="text-light">پنل ادمین</h1>
+            <a href="/" class="btn btn-warning mt-2">مشاهده ی وبسایت</a>
+            <button class="btn btn-outline-warning mt-2" onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله جدید</button>
+            <h1 class="text-center mt-5 pt-5" style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
+        </div>
+        <div id="addNewArticle" class="addNewArticle pt-4 pb-4 jumbotron  text-center">
+            <button onclick="document.getElementById('addNewArticle').style.display='none'" class="btn btn-outline-danger closeTab">بستن</button>
+            <h3 class="mb-3">افزودن مقاله جدید</h3>
+            <form action="/handlenews" method="post" enctype="multipart/form-data">
+                <label for="title">عنوان مقاله</label>
+                <input class="form-control col-5 mx-auto d-inline-block" id="title" type="text" name="title"><br><br>    
+                <label for="desc">توضیحات مقاله</label>
+                <textarea style="height: 250px;" class="form-control col-5 mx-auto d-inline-block" id="desc" name="desc"></textarea>
+                 <br>
+                <label for="label">دسته بندی</label> 
+                <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label"><br>
+                <label for="image">افزودن عکس</label>
+                <input class="mx-auto mt-2" type="file" id="image" name="image"><br>
+                <button class="btn text-warning addBtn mt-3  mx-auto" type="submit"> افزودن مقاله</button>
+            </form>
+        </div>
+
+        <!-- *************************************************************** -->
+        <!-- ************************ ARTICLES LIST ************************ -->
+        <!-- *************************************************************** -->
+
+        <div>
+
+            <% news.forEach((article, i) => { %>
+                <div class="eachArticle">
+                    <img class="articleImg" src="<%= article.img %>"> 
+                    <p class="title"><%= article.title %></p>
+                    <div class="desc"><%= article.desc %> </div>
+                    <a class="btn btn-outline-danger deleteBtn" href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
+                    <button  class="btn text-warning editBtn" name="form<%= i %>" onclick="openEditForm(this)" style="display: inline-block;">ویرایش مقاله</button>
+
+                    <!-- ********************** EDIT ARTICLE ********************* -->
+
+                    <div id="form<%= i %>" class="editArticle pt-4 pb-4 jumbotron  text-center">
+                    <button name="form<%= i %>" onclick="openEditForm(this)" class="btn btn-outline-danger closeTab">بستن</button>
+                        <h3 class="mb-3">ویرایش مقاله</h3>
+                        <form action="/editaricle/<%= article._id %>" method="post" enctype="multipart/form-data">
+                            <label for="editedTtitle">عنوان مقاله</label>
+                            <input class="form-control col-6 mx-auto d-inline-block" id="editedTitle" type="text" name="title" value="<%= article.title %> "><br><br>
+                            <label for="editedDesc">توضیحات مقاله</label>                            
+                            <textarea style="height: 250px;" class="form-control mx-auto d-inline-block col-6 textarea" id="editedDesc" name="desc">
+                                <%= article.desc %>
+                            </textarea>
+                             <br>
+                            <label for="label">دسته بندی</label>
+                            <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="editedLabel" value="<%= article.label %> "><br>
+                            <label for="image">افزودن عکس</label>
+                            <input class="mt-2 mx-auto" type="file" id="image" name="image"><br>
+                            <button class="btn text-warning addBtn mt-3  mx-auto" type="submit"> ویرایش</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %> 
+        </div>
+
+        <!-- *************************************************************** -->
+        <!-- *************************** SCRIPTS *************************** -->
+        <!-- *************************************************************** -->
+
+        <script src="/js/editArticle.js"></script>
+    </body>
 </html>
