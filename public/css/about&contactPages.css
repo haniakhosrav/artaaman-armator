@@ -2,19 +2,6 @@
 /*                                 BOTH-PAGES                                 */
 /* -------------------------------------------------------------------------- */
 
-.outerPart {
-  background-color: var(--grey-light);
-  min-height: 70vh;
-  padding: 4rem 6rem;
-  text-align: center;
-  direction: rtl;
-  font-family: "Shabnam-DG-N";
-}
-.myMainTitle {
-  margin-bottom: 2rem;
-  padding-top: 4rem;
-}
-
 .myArticle {
   text-align: right;
   background-color: var(--white-color);
@@ -26,8 +13,8 @@
   margin: 1rem auto;
 }
 .myArticle:last-of-type {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
+}
 .myAlignIcon {
   display: flex;
   align-items: center;
@@ -65,7 +52,6 @@
 .myContentPage .myArticle a,
 .myContentPage .mySection a {
   color: var(--green-light);
-  font-weight: 400;
   white-space: nowrap;
   font-family: "Shabnam-DG-B";
 }
@@ -97,4 +83,9 @@
 .myContentPage .mySectionCol {
   align-items: center;
   padding-bottom: 1rem;
+}
+.mySociallink {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

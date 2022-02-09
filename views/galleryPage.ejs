@@ -10,9 +10,7 @@
   <meta name="author" content="">
 
   <link rel="stylesheet" href="/css/aos.css">
-  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  
 
   <link rel='stylesheet' href='/css/bootstrap.min.css'>
   <link rel="stylesheet" href="/css/glightbox.css">
@@ -20,7 +18,6 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/responsiv.css">
   <link rel="stylesheet" href="/css/galleryPage.css"> 
-   <!-- <link rel="stylesheet" href="css/testgallery.css"> -->
 
   <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
@@ -31,21 +28,19 @@
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 NAVBAR                                  -->
   <!-- ----------------------------------------------------------------------- -->
-  <div class="extNav-container" >
 <script src="/layouts/nav.js"></script>
-</div>
 <!-- ----------------------------------------------------------------------- -->
 <!--                             FILTER-GALLERY                              -->
 <!-- ----------------------------------------------------------------------- -->
+<main class="outerPart myGalleryPage">
+  <header class="myMainTitle"><h1 data-aos="fade-up" >گالری تصاویر</h1></header>
   <div class="container myFilterGallery">
     <div class="row">
       <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="text-center" id="myBtn-wrapper">
-          <button class="btn btn-default filter-button active" id="all" onclick="call(this.id)">همه</button>
-          <button class="btn btn-default filter-button" id="map" onclick="call(this.id)">نقشه‌ها</button>
-          <button class="btn btn-default filter-button" id="pieces" onclick="call(this.id)">قطعات</button>
-          <!-- <button class="btn btn-default filter-button" id="fish" onclick="call(this.id)">Fish</button>
-          <button class="btn btn-default filter-button" id="panda" onclick="call(this.id)">Panda</button> -->
+        <div data-aos-delay="100" class="text-center" id="myBtn-wrapper">
+          <button data-aos="fade-up" data-aos-delay="100" class="btn btn-default filter-button active" id="all" onclick="call(this.id)">همه</button>
+          <button data-aos="fade-up" data-aos-delay="200" class="btn btn-default filter-button" id="map" onclick="call(this.id)">نقشه‌ها</button>
+          <button data-aos="fade-up" data-aos-delay="300"class="btn btn-default filter-button" id="pieces" onclick="call(this.id)">قطعات</button>
         </div>
       </div>
  
@@ -112,28 +107,29 @@
       </a>
     </div>
   </div>
-
+  <div class="backBtnWrapper">
+    
+    <a data-aos="fade-up"  class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a>
+  </div>
+</main>
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 FOOTER                                  -->
   <!-- ----------------------------------------------------------------------- -->
-  <div class="extFoot-container">
  <script src="/layouts/footer.js"></script>
-</div>
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 SCRIPTS                                 -->
   <!-- ----------------------------------------------------------------------- -->
-  <script src="/js/glightbox.min.js"></script>
-  <!-- <script src="js/testgallery.js"></script> -->
-
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  
   <script src="/js/jquery.min.js"></script>
   <script src="/js/aos.js"></script>
   <script src="/js/owl.carousel.min.js"></script>
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/glightbox.min.js"></script>
+  <script src="/js/galleryPage.js"></script>
 
   
 

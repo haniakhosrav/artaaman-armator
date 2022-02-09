@@ -79,13 +79,13 @@
  .myFooter-container h5:nth-of-type(2) {
     order: -1;
   }  
-  .myFooter-right{
+  .myFooter-header{
     order: -1;
   }
   .myFooter-copyRight{
     order: 1;
   }
-  .mySocialLinks{
+  .myFooter-socialMedias{
     width: 100%;
   }
 
@@ -96,7 +96,7 @@
  /* .myContentPage  .myArticle{
     padding:.5rem 2rem;
   } */
-  .myContentPage .myArticle h3{
+   .myArticle h3{
     /* color: var(--grey-dark);
     margin-right: 2rem;
     white-space: nowrap; */
@@ -164,7 +164,7 @@ border-top: var(--yallow-mid) 2px solid;
 padding-top: .5rem;
 text-align: center;
   }
-  .myContentPage .myArticle h3{ margin-right: 0;}
+  .myArticle h3{ margin-right: 0;}
   .myContentPage .mySectionCol{
     width: 100%;
     text-align: center;

@@ -1,6 +1,10 @@
 .myNavbar-contents {
   inset: 55px auto auto 0px;
 }
+.outerPart {
+  background-color: var(--white-color);
+  direction: ltr;
+}
 
 .myFilterGallery a {
   width: 100%;

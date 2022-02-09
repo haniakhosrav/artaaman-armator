@@ -32,16 +32,16 @@
   <!--                                 NAVBAR                                  -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <!-- ----------------------------- NAVBAR-TITLE ------------------------------ -->
-  <div class="extNav-container" >
+ 
     <script src="/layouts/nav.js"></script>
-    </div>
+ 
 
 <!-- ----------------------------------------------------------------------- -->
 <!--                                NEWS-PART                                -->
 <!-- ----------------------------------------------------------------------- -->
-<div class="mainWrapper">
-  <div class="content-wrapper">
+<div class="mainWrapper myNewsPage">
+  <header class="myMainTitle"><h1 data-aos="fade-up">اخبار و مقالات</h1></header>
+  <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100" >
   
     <% if(news.length > 0) { %> 
       <% news.forEach(article => { %>
@@ -59,97 +59,11 @@
         </div>
       <% }) %> 
     <% } %>  
-  
-    <!-- <div class="news-card" id="newsCard-2">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (2).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">استاپ-موشن چیست؟</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="news-card" id="newsCard-3">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (3).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">انواع استاپ-موشن</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="news-card" id="newsCard-4">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (4).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">حضور آرتامن در دوازدهمین جشنواره پویانمایی ایران</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله ولوژی مورد نیاز و کاربردهای متنوع</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="news-card" id="newsCard-5">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (5).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">چگونه مدل بسازیم؟</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-  
-    <div class="news-card" id="newsCard-6">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (6).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">لوازم مورد نیاز برای ساخت استاپ-موشن</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله د</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="news-card" id="newsCard-7">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (6).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">لوازم مورد نیاز برای ساخت استاپ-موشن</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله د</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="news-card" id="newsCard-8">
-      <a href="#" class="news-card__card-link"></a>
-      <img src="/images/NEWS/news-00 (4).jpg" alt="" class="news-card__image">
-      <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">حضور آرتامن در دوازدهمین جشنواره پویانمایی ایران</h2>
-        <div class="news-card__post-date">10 اسفند 1400</div>
-        <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله ولوژی مورد نیاز و کاربردهای متنوع</p>
-          <a href="#" class="news-card__read-more">بیشتر <i class="fas fa-long-arrow-alt-left"></i></a>
-        </div>
-      </div>
-    </div> -->
   </div>
+
+  <div class="backBtnWrapper"><a data-aos="fade-up" data-aos-delay="100" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a></div>
 </div>
+
 
   <!-- ----------------------------------------------------------------------- -->
   <!--                                 FOOTER                                  -->
