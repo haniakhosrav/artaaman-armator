@@ -52,10 +52,24 @@ exports.handleNews = async (req, res) => {
     if(req.file == undefined) image = '/images/logo-grey.svg';
     else image = req.file.path.replace(/\134/g,"/").slice(6);
 
+    const createdOrChanged = {
+        title, 
+        desc, 
+        label, 
+        img: image
+    }
+
     try {
-        console.log(req.file)
-        await newsModel.create({title, desc, label, img: image});
-        res.redirect('/news');
+        console.log(req.url)
+        if(req.url == '/handlenews') {
+            await newsModel.create(createdOrChanged);
+            req.flash('success', 'مقاله با موفقیت افزوده شد');
+        }
+        else {
+            await newsModel.findOneAndUpdate({_id:req.params.id}, createdOrChanged);
+            req.flash('success', 'مقاله با موفقیت تغییر یافت');
+        }
+        res.redirect('/adminpanel');
     } catch (err) {
         req.flash('error', 'مشکلی در برقراری ارتباط با سرور وجود دارد');
         res.redirect('/adminpanel');
