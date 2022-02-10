@@ -74,7 +74,7 @@
                     <div id="form<%= i %>" class="editArticle pt-4 pb-4 jumbotron  text-center">
                     <button name="form<%= i %>" onclick="openEditForm(this)" class="btn btn-outline-danger closeTab">بستن</button>
                         <h3 class="mb-3">ویرایش مقاله</h3>
-                        <form action="/editaricle/<%= article._id %>" method="post" enctype="multipart/form-data">
+                        <form action="/editarticle/<%= article._id %>" method="post" enctype="multipart/form-data">
                             <label for="editedTtitle">عنوان مقاله</label>
                             <input class="form-control col-6 mx-auto d-inline-block" id="editedTitle" type="text" name="title" value="<%= article.title %> "><br><br>
                             <label for="editedDesc">توضیحات مقاله</label>                            
@@ -83,7 +83,7 @@
                             </textarea>
                              <br>
                             <label for="label">دسته بندی</label>
-                            <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="editedLabel" value="<%= article.label %> "><br>
+                            <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label" value="<%= article.label %> "><br>
                             <label for="image">افزودن عکس</label>
                             <input class="mt-2 mx-auto" type="file" id="image" name="image"><br>
                             <button class="btn text-warning addBtn mt-3  mx-auto" type="submit"> ویرایش</button>
