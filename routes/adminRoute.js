@@ -16,8 +16,9 @@ router.get('/adminlogin', getAdminLogin);
 router.get('/adminpanel', getAdminPanel);
 router.post('/adminlogin', handleAdminLogin);
 router.post('/handlenews', upload.single('image'), handleNews);
+router.post('/editarticle/:id', upload.single('image'), handleNews);
 router.get('/news/:id', handleLoadingNews);
-router.get('/deletearticle/:id', deleteArticle)
+router.get('/deletearticle/:id', deleteArticle);
 
 
 module.exports = router;
