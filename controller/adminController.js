@@ -15,7 +15,7 @@ exports.getAdminLogin = (req, res) => {
 exports.getAdminPanel = async (req, res) => {
     const news = await newsModel.find();
     if(req.isAuthenticated()) return res.render('adminPanel', {
-        news,
+        news: news.reverse(),
         error: req.flash('error'),
         success: req.flash('success'),
     });
