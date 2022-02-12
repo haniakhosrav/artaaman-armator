@@ -1,6 +1,6 @@
 const newsModel = require('../model/newsModel');
 const passport = require('passport');
-
+const {formatDate} = require('../utils/jalali');
 
 //? loading admin login page
 
@@ -50,11 +50,11 @@ exports.handleNews = async (req, res) => {
 
     if(req.file == undefined) image = '/images/logo-grey.svg';
     else image = req.file.path.replace(/\134/g,"/").slice(6);
-    
+
     const createdOrChanged = {
         title, 
         desc, 
-        label, 
+        label: label.trim(),
         img: image
     }
 
@@ -80,8 +80,13 @@ exports.handleNews = async (req, res) => {
 exports.handleLoadingNews = async (req, res) => {
     try {
         const article = await newsModel.findOne({_id: req.params.id});
+        const related = await newsModel.find({label: article.label});
+        const reletedExIt = related.filter(ar => ar._id != article.id);
+        console.log(related)
         res.render('singleNewsPage', {
            article,
+           formatDate,
+           related: reletedExIt
         });
     } catch (err) {
         console.log(err);
