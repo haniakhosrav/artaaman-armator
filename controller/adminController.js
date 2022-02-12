@@ -39,15 +39,24 @@ exports.handleNews = async (req, res) => {
     let image;
     const {title, desc, label} = req.body;
 
-    if(req.file == undefined) image = '/images/logo-grey.svg';
-    else image = req.file.path.replace(/\134/g,"/").slice(6);
-
     const createdOrChanged = {
         title, 
         desc, 
         label, 
         img: image
     }
+
+    if(!title || !desc) {
+        req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
+        return res.redirect('/adminpanel');
+    }
+    if(!label) {
+        req.flash('error', 'لطفا دسته بندی مقاله را قرار دهید');
+        return res.redirect('/adminpanel');
+    }
+
+    if(req.file == undefined) image = '/images/logo-grey.svg';
+    else image = req.file.path.replace(/\134/g,"/").slice(6);
 
     try {
         console.log(req.url)
@@ -64,23 +73,6 @@ exports.handleNews = async (req, res) => {
         req.flash('error', 'مشکلی در برقراری ارتباط با سرور وجود دارد');
         res.redirect('/adminpanel');
     }
-}
-
-//? permision create or update article
-
-exports.perCreateUpdate = (req, res, next) => {
-    const {title, desc, label} = req.body;
-    
-    if(!title || !desc) {
-        req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
-        return res.redirect('/adminpanel');
-    }
-    if(!label) {
-        req.flash('error', 'لطفا دسته بندی مقاله را قرار دهید');
-        return res.redirect('/adminpanel');
-    } else {
-        return next();
-    }    
 }
 
 //? handle loading news
