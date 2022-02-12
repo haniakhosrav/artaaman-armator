@@ -489,6 +489,9 @@
     right: 19px;
     padding: 1rem;
     height: 40%;
+    overflow: hidden;
+    box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
+
   }
   
   .mySlideShow-info small {
@@ -527,8 +530,12 @@
   
   .mySlideshow-item:hover .mySlideShow-infoIcon{
     transition: all ease-in 300ms;
-    left:2px;
+    left:2%;
   background-color: var(--yellow-dark);
+  }
+  .mySlideshow-item:hover .mySlideShow-info{
+height: auto;
+
   }
   .mySlideshow-item:hover .mySlideShow-info a{
     transition: all ease-in 300ms;
