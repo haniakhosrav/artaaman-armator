@@ -46,7 +46,7 @@ app.use(passport.session());
 app.use(mainRoutes);
 app.use(adminRoutes);
 app.use((req, res) => {
-    res.send('404 Not found!!')
+    res.render('404');
 })
 
 
