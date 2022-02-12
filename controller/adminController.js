@@ -39,13 +39,6 @@ exports.handleNews = async (req, res) => {
     let image;
     const {title, desc, label} = req.body;
 
-    const createdOrChanged = {
-        title, 
-        desc, 
-        label, 
-        img: image
-    }
-
     if(!title || !desc) {
         req.flash('error', 'عنوان و توضیحات مقاله را وارد کنید')
         return res.redirect('/adminpanel');
@@ -57,6 +50,13 @@ exports.handleNews = async (req, res) => {
 
     if(req.file == undefined) image = '/images/logo-grey.svg';
     else image = req.file.path.replace(/\134/g,"/").slice(6);
+    
+    const createdOrChanged = {
+        title, 
+        desc, 
+        label, 
+        img: image
+    }
 
     try {
         console.log(req.url)
