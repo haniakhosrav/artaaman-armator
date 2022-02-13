@@ -7,7 +7,7 @@ document.write(
 
  <nav class="myNavbar">
  <div class="mainWrapper">
-   <a href="#" id="myNavbar-logo">
+   <a href="/" id="myNavbar-logo">
      <svg xmlns="http://www.w3.org/2000/svg" width="37.545" height="55.522" viewBox="0 0 37.545 55.522">
        <g id="Group_1" data-name="Group 1" transform="translate(-297.439 -21.708)">
          <circle id="Ellipse_4" data-name="Ellipse 4" cx="5.581" cy="5.581" r="5.581"
