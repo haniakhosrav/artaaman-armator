@@ -55,7 +55,6 @@
 }
 @media only screen and (max-width: 681px) {
   .mySectionCol{
-    /* display: block; */
   }
 }
 @media only screen and (max-width: 600px) {
@@ -93,13 +92,8 @@
   .outerPart {
     padding: 4rem 2rem;
   }
- /* .myContentPage  .myArticle{
-    padding:.5rem 2rem;
-  } */
+
    .myArticle h3{
-    /* color: var(--grey-dark);
-    margin-right: 2rem;
-    white-space: nowrap; */
     padding-bottom: 1rem;
   
   }
@@ -115,6 +109,8 @@
 
   .myGallery-wrapper {
     width: 80%;
+    height: 110em;
+
   }
   .mySwiper-container {
     width: 100%;
@@ -140,16 +136,17 @@
     width: 90%;
     font-size: 80%;
   }
-  .mySection{
-    /* padding-right: 0; */
-    /* border-right: none;
-    border-top: var(--yallow-mid) 2px solid;
-    padding-top: .5rem; */
-      }
+
     
 
 }
 @media only screen and (max-width: 375px) {
+  footer{
+    padding: 0;
+  }
+  .myFooter-container p {
+    width: 100%;
+  }
   .owl-theme .owl-dots .owl-dot {
     zoom: 0.8;
   }
@@ -173,27 +170,20 @@ text-align: center;
     width: 100%;
     justify-content: center;
   }
-}
-@media only screen and (max-width: 300px) {
-  #myNavbar-logo svg {
-    width: 80%;
-  }
-  .myNavbar button svg {
-    width: 80%;
-  }
-  .myHeader-contents button {
-    margin: 0 0;
-    padding: 0.1rem 0.5rem;
-  }
-  .myAboutUs-container {
+  .mySwiper-container {
     width: 100%;
-    background-size: 4em, 2em;
-    font-size: 50%;
+}
+.mySwiper-container h2 {
+  margin: 0;
+}
+.myAboutUs-container {
+  width: 100%;}
+  .myGallery-wrapper {
+    width: 85%;
   }
-  .myAboutUs-container h2 {
-    margin: 0 auto;
+  .myFqa-container {
+    padding: 0.5rem;
   }
-
 }
 @media only screen and (max-width: 305px) {
   .myHeader-contents h1 {
@@ -225,6 +215,27 @@ text-align: center;
     padding: 4rem 0;
   }
     
+
+}
+@media only screen and (max-width: 300px) {
+  #myNavbar-logo svg {
+    width: 80%;
+  }
+  .myNavbar button svg {
+    width: 80%;
+  }
+  .myHeader-contents button {
+    margin: 0 0;
+    padding: 0.1rem 0.5rem;
+  }
+  .myAboutUs-container {
+    width: 100%;
+    background-size: 4em, 2em;
+    font-size: 50%;
+  }
+  .myAboutUs-container h2 {
+    margin: 0 auto;
+  }
 
 }
 @media only screen and (max-width: 200px) {
