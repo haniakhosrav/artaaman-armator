@@ -1,9 +1,13 @@
 document.write(
  `
+ 
  <div class="preloader"> 
-    <img class="preloader-icon" src="/images/pointsIcon-01.svg" alt="My Site Preloader">
-  <p>  صفحه درحال بارگذاری است، لطفاً چند لحظه صبر کنید</p>  
-  </div>
+ <div class="preloader-iconWrapper">
+   <img class="preloader-icon" src="/images/pointsIcon-01.svg" alt="My Site Preloader">
+   <img class="preloader-icon" src="/images/pointsIcon-03.svg" alt="My Site Preloader">
+   <img class="preloader-icon" src="/images/pointsIcon-04.svg" alt="My Site Preloader">
+ </div>
+</div>
 
  <nav class="myNavbar">
  <div class="mainWrapper">
