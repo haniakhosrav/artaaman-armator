@@ -224,7 +224,7 @@ strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: reveal 3s ease-out infinite;
+  animation: reveal 3s ease-out ;
 }
 .preloader-icon {
   width: 100px;
