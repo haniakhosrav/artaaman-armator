@@ -32,7 +32,7 @@ document.write(`
     <a title="اینستاگرام" target="_blank" href="https://www.instagram.com/artaman_co/">
       <span class="iconify" data-icon="lucide:instagram" data-width="25"></span>
     </a>
-    <a title="واتساپ" target="_blank" href="https://wa.me/00989909890646">
+    <a title="واتساپ" target="_blank" href="https://wa.me/989909890646">
       <span class="iconify" data-icon="ic:twotone-whatsapp" data-width="28"></span>
     </a>
     <a title="ایمیل"  target="_blank" href="mailto:artaamane@gmail.com">

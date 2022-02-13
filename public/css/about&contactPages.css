@@ -36,6 +36,21 @@
   display: flex;
   flex-direction: column;
 }
+.mySection p a:visited{
+  color: var(--green-dark);
+}
+.mySection p a{
+  font-weight: bold;
+  color: var(--green-light);
+}
+.mySection p a:active{
+  color: var(--green-mid);
+}
+.mySection p a:hover{
+  color: var(--yellow-dark);
+}
+
+
 
 /* -------------------------------------------------------------------------- */
 /*                               CONTACT-US-PAGE                              */
@@ -88,4 +103,94 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 RESPONSIVE                                 */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+  .myArticle {
+    width: 90%;
+    padding: 1.5rem 2rem;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .outerPart{
+    padding: 4rem 4rem;
+  }
+  .myArticle{
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+ 
+ 
+  .outerPart {
+    padding: 4rem 2rem;
+  }
+
+   .myArticle h3{
+    padding-bottom: 1rem;
+  
+  }
+}
+
+
+
+@media only screen and (max-width: 375px) {
+
+
+  .myArticle {
+    text-align: center;
+  }
+  .mySection{
+padding-right: 0;
+border-right: none;
+border-top: var(--yallow-mid) 2px solid;
+padding-top: .5rem;
+text-align: center;
+  }
+  .myArticle h3{ margin-right: 0;}
+  .myContentPage .mySectionCol{
+    width: 100%;
+    text-align: center;
+  }
+  .myContentPage .myAlignIcon{
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+@media only screen and (max-width: 305px) {
+ 
+  .myArticle {
+    /* padding: .5rem 1rem; */
+    width: 100%;
+  
+  }
+  .mySection{
+    /* width: 90%; */
+    margin: auto 0;
+    padding: auto 0;
+  }
+  .outerPart {
+    padding: 4rem 0;
+  }
+    
+
+}
+
+@media only screen and (max-width: 200px) {
+  
+  .myArticle{
+    padding: 0;
+  }
+
 }

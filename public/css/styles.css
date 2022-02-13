@@ -213,10 +213,9 @@ box-shadow: none;
   }
 }
 
+
 .preloader {
   position: fixed;
-  /* top: 0;
-left: 0; */
   width: 100%;
   height: 100vh;
   background: var(--grey-light);
@@ -513,3 +512,75 @@ footer h5 {
   align-self: flex-end;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 RESPONSIVE                                 */
+/* -------------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
+  .myNavbar-contents {
+    width: 8%;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+
+  .myFooter-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .myFooter-emailAddress {
+    display: none;
+  }
+  .myFooter-emailIcone{
+    display: block;
+  } 
+  .myFooter-container p{
+    order:-1;
+  }
+ .myFooter-container h5:nth-of-type(2) {
+    order: -1;
+  }  
+  .myFooter-header{
+    order: -1;
+  }
+  .myFooter-copyRight{
+    order: 1;
+  }
+  .myFooter-socialMedias{
+    width: 100%;
+  }
+}
+
+
+
+@media only screen and (max-width: 425px) {
+ 
+  .myNavbar-contents {
+    width: 100%;
+  }
+  .myNavbar-contents ul {
+    width: 100%;
+    min-height: 80vh;
+    z-index: 10;
+  }
+ 
+  }
+
+  
+
+@media only screen and (max-width: 375px) {
+  footer{
+    padding: 0;
+  }
+  .myFooter-container p {
+    width: 100%;
+  }}
+  
+
+@media only screen and (max-width: 300px) {
+  #myNavbar-logo svg {
+    width: 80%;
+  }
+  .myNavbar button svg {
+    width: 80%;
+  }}
