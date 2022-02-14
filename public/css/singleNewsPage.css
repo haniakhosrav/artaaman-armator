@@ -262,8 +262,28 @@
   }
   
   @media(max-width:768px) {
+
+      .myNews-figureCapion{
+    column-count: 1;
+ 
+    }
+  }
+
+  @media(max-width:500px) {
+    .myNews-figureCapion{
+    text-align: center;
+    }}
+  @media(max-width:425px) {
+    .myNews-header h1 {
+      font-size: 30px;
+  }
+
+  }
+  @media(max-width:375px) {
     .myNews-figureCapion{
     column-count: 1;
+    padding: 1rem;
+    width: 100%;
     }
   }
   
