@@ -578,12 +578,27 @@ footer h5 {
     text-align: center;
   }
   .myNavbar-item p {
+    display: block;
     position: static;
     text-align: center;
     background-color: transparent;
   }
+  .myNavbar-item:hover p, .myNavbar-item:hover .iconify{
+color: var(--yellow-light);
+  }
+
+  .myNavbar-contents li {
+    list-style: none;
+    border-bottom: 1px grey solid;
+    width: 35%;
 }
 
+.myNavbar-contents li:hover  {
+  border-bottom: 1px var(--yellow-light) solid;
+  width: 50%;
+  transition: all ease-in-out .5s;
+}
+}
 @media only screen and (max-width: 375px) {
   footer {
     padding: 0;
