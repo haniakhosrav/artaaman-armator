@@ -101,6 +101,9 @@ a:focus {
 h1 {
   font-family: "Shabnam-Bold";
 }
+h1, h2, h4 {
+color: var(--grey-dark);
+}
 
 strong {
   color: var(--yellow-dark);
@@ -462,9 +465,10 @@ footer {
 }
 
 .myFooter-socialMedias .iconify,
-footer a {
+footer a, footer h2 {
   color: var(--white-color);
 }
+
 footer .iconify {
   color: var(--yellow-light);
   margin: auto 0.3rem;

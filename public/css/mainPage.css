@@ -230,6 +230,7 @@
   .myAboutUs-container h2 {
     margin: 2rem auto;
     width: 50%;
+    color: var(--green-mid);
   }
   .myAboutUs-container p {
     margin: 0 auto;
@@ -391,6 +392,7 @@
     z-index: 1;
     width: 100%;
     margin-bottom: 4rem;
+    color: var(--green-mid);
   }
   .mySlogan-container img {
     max-height: 100%;
@@ -424,6 +426,7 @@
   .mySlogan-contents h3 {
     transform: translateY(50%);
     margin-right: 1rem;
+    font-weight: 100;
   }
   
   /* -------------------------------------------------------------------------- */
@@ -730,6 +733,9 @@ height: auto;
 }
 
   
+.myAboutUs-wrapper{
+  margin: 6rem 0;
+}
 .myAboutUs-container h2 {
   margin: 1rem auto;
   width: 78%;}
@@ -755,12 +761,18 @@ margin-bottom: 0;
   .myGallery-container {
     min-height:110em;
   }
+  .myFqa-wrapper{
+    margin: 6rem 0;
+  }
   .myFqa-container {
     padding: 0.5rem;
   }
   .mySlogan-container {
     /* padding: 0; */
     width: auto;
+  }
+  .mySlogan-wrapper{
+    margin: 6rem 0;
   }
   .mySlogan-container h2 {
     margin-bottom: auto;
