@@ -54,4 +54,10 @@ var lightboxDescription = GLightbox({
             });
           }
   
-    
+  function pagination()  {
+    var images = document.querySelectorAll(".glightbox");
+    let imgAr = Array.from(images);
+    let slideImg= imgAr.slice(5)
+
+   slideImg.map((i) => i.style.display="none")
+  }

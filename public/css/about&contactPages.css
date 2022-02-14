@@ -117,9 +117,7 @@
 
 @media only screen and (max-width: 700px) {
 
-  .outerPart{
-    padding: 4rem 4rem;
-  }
+
   .myArticle{
     width: 100%;
   }
@@ -130,9 +128,7 @@
 
  
  
-  .outerPart {
-    padding: 4rem 2rem;
-  }
+
 
    .myArticle h3{
     padding-bottom: 1rem;
@@ -154,6 +150,7 @@ border-right: none;
 border-top: var(--yallow-mid) 2px solid;
 padding-top: .5rem;
 text-align: center;
+margin-top: 0;
   }
   .myArticle h3{ margin-right: 0;}
   .myContentPage .mySectionCol{
@@ -180,9 +177,7 @@ text-align: center;
     margin: auto 0;
     padding: auto 0;
   }
-  .outerPart {
-    padding: 4rem 0;
-  }
+
     
 
 }

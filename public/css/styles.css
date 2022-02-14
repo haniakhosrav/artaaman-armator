@@ -101,9 +101,7 @@ a:focus {
 h1 {
   font-family: "Shabnam-Bold";
 }
-h1, h2, h4 {
-color: var(--grey-dark);
-}
+
 
 strong {
   color: var(--yellow-dark);
@@ -135,7 +133,7 @@ strong {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   background-color: var(--grey-mid);
-  color: var(--white-color);
+  color: var(--white-color)!important;
   white-space: nowrap;
   cursor: pointer;
 }
@@ -527,6 +525,14 @@ footer h5 {
     width: 8%;
   }
 }
+@media only screen and (max-width: 700px) {
+
+  .outerPart{
+    padding: 4rem 4rem;
+  }
+
+}
+
 
 @media only screen and (max-width: 600px) {
   .myFooter-container {
@@ -554,6 +560,9 @@ footer h5 {
   .myFooter-socialMedias {
     width: 100%;
   }
+  .outerPart {
+    padding: 4rem 2rem;
+  }
 }
 
 @media only screen and (max-width: 425px) {
@@ -573,6 +582,9 @@ footer h5 {
   }
   .myFooter-container p {
     width: 100%;
+  }
+  .outerPart {
+    padding: 4rem 1rem;
   }
 }
 
