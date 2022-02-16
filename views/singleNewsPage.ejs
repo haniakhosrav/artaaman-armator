@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content= "<%= article.desc %>">
-  <meta property="og:image"  content="<%= article.img %>">
+  <meta name="description" content= "<%- article.desc %>">
+  <meta property="og:image"  content="<%- article.img %>">
 
   <meta name="keywords" content="آرماتور,  استاپموشن, انیمیت">
   <meta>
@@ -75,7 +75,7 @@
       <figure class="myNews-figure">
         <img src="<%= article.img %>" alt="<%= article.title %>">
         <figcaption class="myNews-figureCapion">
-          <%= article.desc %>
+          <%- article.desc %>
         </figcaption>
       </figure>
     </article>
@@ -97,7 +97,7 @@
               <div class="myCardDetails">
                 <small><%= formatDate(related.createdAt) %> </small>
                 <h3><%= related.title %> </h3>
-                <p><%= related.desc %> </p>
+                <p><%- related.desc %> </p>
               </div>
             </a>
           </div><!-- ITEM END --> 

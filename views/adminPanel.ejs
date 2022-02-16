@@ -12,6 +12,7 @@
         <link rel="icon" type="image/x-icon" href="/images/logo.svg">
 
         <title>Admin Panel</title>
+        <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
 
     </head>
     <body>
@@ -45,7 +46,7 @@
                 <label for="title">عنوان مقاله</label>
                 <input class="form-control col-5 mx-auto d-inline-block" id="title" type="text" name="title"><br><br>    
                 <label for="desc">توضیحات مقاله</label>
-                <textarea style="height: 250px;" class="form-control col-5 mx-auto d-inline-block" id="desc" name="desc"></textarea>
+                <textarea  id="desc" name="desc"></textarea>
                  <br>
                 <label for="label">دسته بندی</label> 
                 <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label"><br>
@@ -65,7 +66,7 @@
                 <div class="eachArticle">
                     <img class="articleImg" src="<%= article.img %>"> 
                     <p class="title"><%= article.title %></p>
-                    <div class="desc"><%= article.desc %> </div>
+                    <div class="desc"><%- article.desc %> </div>
                     <a class="btn btn-outline-danger deleteBtn" href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
                     <button  class="btn text-warning editBtn" name="form<%= i %>" onclick="openEditForm(this)" style="display: inline-block;">ویرایش مقاله</button>
 
@@ -78,9 +79,9 @@
                             <label for="editedTtitle">عنوان مقاله</label>
                             <input class="form-control col-6 mx-auto d-inline-block" id="editedTitle" type="text" name="title" value="<%= article.title %> "><br><br>
                             <label for="editedDesc">توضیحات مقاله</label>                            
-                            <textarea style="height: 250px;" class="form-control mx-auto d-inline-block col-6 textarea" id="editedDesc" name="desc">
-                                <%= article.desc %>
-                            </textarea>
+                            <div style="height: 250px;"  id="editedDesc" name="desc">
+                                <%- article.desc %>
+                            </div>
                              <br>
                             <label for="label">دسته بندی</label>
                             <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label" value="<%= article.label %> "><br>
@@ -98,5 +99,20 @@
         <!-- *************************************************************** -->
 
         <script src="/js/editArticle.js"></script>
+        <script>
+            ClassicEditor
+                .create( document.querySelector( '#desc' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+            ClassicEditor
+                .create( document.querySelector( '#editedDesc' ) )
+                .catch( error => {
+                    console.error( error );
+                } );
+
+                
+            
+        </script>
     </body>
 </html>
