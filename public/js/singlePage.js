@@ -28,7 +28,7 @@ $("#relatedNews").owlCarousel({
 waCurrentPage = function () {
   return encodeURI(
     "whatsapp://send?text=اینو ببین: " +
-      "http://" +
+      "https://" +
       window.location.hostname +
       window.location.pathname
   );
