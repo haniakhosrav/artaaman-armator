@@ -25,6 +25,15 @@ $("#relatedNews").owlCarousel({
   },
 });
 
+const newsItem = document.getElementById("newsItem");
+const myAside = document.getElementById("relatedNewsWrapper");
+const backBtn = document.getElementsByClassName("backBtnWrapper");
+if(!newsItem){
+  // console.log("first")
+  myAside.style.display="none";
+  backBtn[0].style.display="flex";
+
+}
 waCurrentPage = function () {
   return encodeURI(
     "whatsapp://send?text=اینو ببین: " +

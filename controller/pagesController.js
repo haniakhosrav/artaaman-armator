@@ -34,3 +34,12 @@ exports.getMain = async (req, res) => {
           last: last10Articles,
     });
 }
+
+//? loading desc
+// exports.getMain = async (req, res) => {
+//     const description = await newsModel.find();
+//     const descKeyWords = description.reverse().slice(0, 10);
+//     res.render('singleNewsPage', {
+//           kesWords: descKeyWords,
+//     });
+// }

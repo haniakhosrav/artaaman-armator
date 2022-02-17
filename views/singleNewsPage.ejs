@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content= "<%- article.desc %>">
-  <meta property="og:image"  content="<%- article.img %>">
-
+  <meta name="description" content= "<%= article.desc %>">
   <meta name="keywords" content="آرماتور,  استاپموشن, انیمیت">
-  <meta>
+
+
+  <meta property="og:title" content="   <%= article.title %>" />
+  <meta property="og:url" content="https://www.artaaman.com/singleNewsPage/" />
+  <meta property="og:description" content="<%= article.desc %>">
+  <meta property="og:image" content="<%= article.img %>">
+  <meta property="og:type" content="article" />
+
+
+
 
   <link rel="stylesheet" href="/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/css/owl.theme.default.min.css">
@@ -83,7 +90,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                            RELATED-NEWS                             -->
     <!-- ----------------------------------------------------------------------- -->
-    <aside >
+    <aside id="relatedNewsWrapper">
       <section class="mySlideshow-wrapper">
         <h4 >
           مطالب مشابه
@@ -91,7 +98,7 @@
         <div class="owl-carousel owl-theme mainWrapper" id="relatedNews">
 
           <% related.forEach(related => { %>
-            <div class="myCardItem"><!-- ITEM START -->
+            <div class="myCardItem" id="newsItem"><!-- ITEM START -->
               <a href="/news/<%= related._id %>"> 
               <img src="<%= related.img %> "  alt="<%= article.title %>">
               <div class="myCardDetails">
@@ -105,6 +112,9 @@
         </div>
       </section>
     </aside>
+
+    <div class="backBtnWrapper"><a data-aos="fade-up" data-aos-delay="100" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a></div>
+  </div>
   </main>
 
 
