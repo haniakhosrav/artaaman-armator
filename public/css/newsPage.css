@@ -70,12 +70,14 @@ padding-top: 6rem;
   transition: background-color 1.5s ease;
   direction: rtl;
   width: 100%;
+  font-family: 'Shabnam-DG-N';
+
 }
 
 .news-card__title {
   transition: color 1s ease;
   margin-bottom: 0.5rem;
-  font-family: 'Shabnam-DG-N';
+  /* font-family: 'Shabnam-DG-N'; */
 
 
 }
