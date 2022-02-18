@@ -79,9 +79,9 @@
                             <label for="editedTtitle">عنوان مقاله</label>
                             <input class="form-control col-6 mx-auto d-inline-block" id="editedTitle" type="text" name="title" value="<%= article.title %> "><br><br>
                             <label for="editedDesc">توضیحات مقاله</label>                            
-                            <div style="height: 250px;"  id="editedDesc" name="desc">
-                                <%- article.desc %>
-                            </div>
+                            <textarea style="height: 250px;" class="form-control mx-auto d-inline-block col-6 textarea" id="editedDesc" name="desc">
+                                <%= article.desc %>
+                            </textarea>
                              <br>
                             <label for="label">دسته بندی</label>
                             <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label" value="<%= article.label %> "><br>
@@ -105,11 +105,11 @@
                 .catch( error => {
                     console.error( error );
                 } );
-            ClassicEditor
-                .create( document.querySelector( '#editedDesc' ) )
-                .catch( error => {
-                    console.error( error );
-                } );
+            // ClassicEditor
+            //     .create( document.querySelector( '#editedDesc' ) )
+            //     .catch( error => {
+            //         console.error( error );
+            //     } );
 
                 
             

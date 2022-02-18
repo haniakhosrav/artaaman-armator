@@ -453,6 +453,7 @@
     box-shadow: 2.1px 4.2px 4.2px rgba(85, 85, 85, 0.44);
     height: 200px;
     background-color: var(--grey-light);
+
   }
   
   .mySlideShow-info {
@@ -466,6 +467,8 @@
     height: 40%;
     overflow: hidden;
     box-shadow: 2.1px 4.2px 4.2px hsl(0deg 0% 0% / 0.44);
+    font-family: 'Shabnam-DG-N';
+
 
   }
   

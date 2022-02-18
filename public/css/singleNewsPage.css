@@ -1,14 +1,21 @@
-a{
+strong{
   color: var(--green-light);
+}
+
+a{
+  color: var(--yellow-light);
   cursor: pointer;
 }
+a:visited{
+  color: var(--yellow-dark);
+}
 a:hover{
-  color: var(--yallow-mid);
+  color: var(--green-mid);
   }
 
-a:visited{
-  color: var(--green-dark);
-}
+  .refrence{
+    text-align: left;
+  }
 
 .myNews-outerPart {
     min-height: 100vh;
@@ -26,6 +33,7 @@ a:visited{
     padding-top: 4rem;
   margin-bottom: 2rem;
   text-align: center;
+
   }
   .myNews-header div{
     max-width: 82%; 
@@ -37,6 +45,8 @@ a:visited{
   .myNews-header h1{
     font-size: 40px;
     margin-bottom: 2rem;
+    font-family: 'Shabnam-DG-N';
+
   
   }
   .myNews-header span{
@@ -64,6 +74,7 @@ a:visited{
     font-size: 20px;
     padding: 2rem;
     /* column-count: 2; */
+
     column-gap: 7%;
     text-justify: inter-word;
     text-align: justify;
@@ -296,6 +307,10 @@ a:visited{
     column-count: 1;
     padding: 1rem;
     width: 100%;
+    }
+
+    .myNews-header div{
+      max-width: 100%;
     }
   }
   
