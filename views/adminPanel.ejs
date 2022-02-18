@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/css/adminStyles.css">
         <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/adminStyles.css">
 
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
 
@@ -35,9 +35,9 @@
 
         <div class="addNewOne">
             <h1 class="text-light">پنل ادمین</h1>
-            <a href="/" class="btn btn-warning mt-2">مشاهده ی وبسایت</a>
-            <button class="btn btn-outline-warning mt-2" onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله جدید</button>
-            <h1 class="text-center mt-5 pt-5" style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
+            <a href="/" class="btn btn-warning ">مشاهده ی وبسایت</a>
+            <button class="btn btn-outline-warning " onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله جدید</button>
+            <h1  style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
         </div>
         <div id="addNewArticle" class="addNewArticle pt-4 pb-4 jumbotron  text-center">
             <button onclick="document.getElementById('addNewArticle').style.display='none'" class="btn btn-outline-danger closeTab">بستن</button>
@@ -51,7 +51,7 @@
                 <label for="label">دسته بندی</label> 
                 <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label"><br>
                 <label for="image">افزودن عکس</label>
-                <input class="mx-auto mt-2" type="file" id="image" name="image"><br>
+                <input class="mx-auto " type="file" id="image" name="image"><br>
                 <button class="btn text-warning addBtn mt-3  mx-auto" type="submit"> افزودن مقاله</button>
             </form>
         </div>
@@ -60,15 +60,24 @@
         <!-- ************************ ARTICLES LIST ************************ -->
         <!-- *************************************************************** -->
 
-        <div>
+        <div style=" display: flex; flex-wrap: wrap;">
 
             <% news.forEach((article, i) => { %>
-                <div class="eachArticle">
-                    <img class="articleImg" src="<%= article.img %>"> 
-                    <p class="title"><%= article.title %></p>
-                    <div class="desc"><%- article.desc %> </div>
-                    <a class="btn btn-outline-danger deleteBtn" href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
-                    <button  class="btn text-warning editBtn" name="form<%= i %>" onclick="openEditForm(this)" style="display: inline-block;">ویرایش مقاله</button>
+                <div  class="eachArticle" >
+                    <div class="articleContainer">
+                        
+                        <img class="articleImg" src="<%= article.img %>">
+                        <div class="article-info">
+                        <h3 class="title"><%= article.title %></h3>
+                        <div class="desc"><%- article.desc %> </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn-container">
+                                        <a class="btn btn-outline-danger deleteBtn" href="/deletearticle/<%= article._id %> ">حذف مقاله</a>
+                                        <a class="btn btn-outline-primary deleteBtn" href="/news/<%= article._id %> ">مشاهده مقاله</a>
+                                        
+                                    <button  class=" editBtn" name="form<%= i %>" onclick="openEditForm(this)" >ویرایش مقاله</button>
+                                </div>
 
                     <!-- ********************** EDIT ARTICLE ********************* -->
 
@@ -86,7 +95,7 @@
                             <label for="label">دسته بندی</label>
                             <input class="form-control col-3 mx-auto d-inline-block" id="label" type="text" name="label" value="<%= article.label %> "><br>
                             <label for="image">افزودن عکس</label>
-                            <input class="mt-2 mx-auto" type="file" id="image" name="image"><br>
+                            <input class=" mx-auto" type="file" id="image" name="image"><br>
                             <button class="btn text-warning addBtn mt-3  mx-auto" type="submit"> ویرایش</button>
                         </form>
                     </div>
@@ -112,7 +121,7 @@
             //     } );
 
                 
-            
+     
         </script>
     </body>
 </html>

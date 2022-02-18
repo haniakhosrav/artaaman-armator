@@ -20,7 +20,6 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/singleNewsPage.css">
-  <link rel="stylesheet" href="/css/responsiv.css">
 
   <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
 
@@ -43,33 +42,37 @@
   <main class="myNews-outerPart">
     <article class="myNews-myArticle">
       <header class="myNews-header">
-        <h1 >
+        <h1>
           <%= article.title %>
         </h1>
-        <div >
-          <span><%= formatDate(article.createdAt) %> </span>
+        <div>
+          <span>
+            <%= formatDate(article.createdAt) %>
+          </span>
           <!-- ------------------------------------SHARE-BTNS----------------------------------- -->
-          <button class="btn-share"  >
+          <button class="btn-share">
             <span class="btn-text"> اشتراک‌گذاری</span>
             <span class="iconify btn-icon" data-width="32" data-icon="carbon:share"></span>
 
             <ul class="social-icons">
               <li>
-                <a href="javascript:window.location=waCurrentPage();" title="Whatsapp"> <span class="iconify"
+                <a href="javascript:window.location=waCurrentPage();" title="واتساپ"> <span class="iconify"
                     data-width="32" data-icon="ic:round-whatsapp"></span></a>
               </li>
               <li>
-                <a style="pointer-events: none" title="Likedin"
-                  href="http://www.linkedin.com/shareArticle?mini=true&url={articleUrl}&title={articleTitle}&summary={articleSummary}&source={articleSource}"
-                  target="_blank" class="share-popup">
-                  <span class="iconify" data-width="32" data-icon="ph:linkedin-logo"></span>
-                </a>
+                <a href="http://www.linkedin.com/"
+                  onclick="window.location = 'http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(window.location); return false"
+                  title="لینکدین"
+                  >
+                    <span class="iconify" data-width="32" data-icon="ph:linkedin-logo"></span>
+                  </a>
               </li>
 
               <li>
-                <a  style="pointer-events: none"  target="_blank" title="Telegram" 
-                href="javascript:window.location=telCurrentPage();">
-                  <span class="iconify" data-width="32" data-icon="iconoir:telegram-circled"></span> </a>
+                <a title="توییتر" href="http://twitter.com/" onclick="window.location = 'http://twitter.com/home/?status=' + encodeURIComponent(window.location); return false">
+                  <span class="iconify" data-width="32" data-icon="iconoir:twitter"></span> </a>
+                </a>
+
               </li>
             </ul>
           </button>
@@ -89,29 +92,37 @@
     <!-- ----------------------------------------------------------------------- -->
     <aside id="relatedNewsWrapper">
       <section class="mySlideshow-wrapper">
-        <h4 >
+        <h4>
           مطالب مشابه
         </h4>
         <div class="owl-carousel owl-theme mainWrapper" id="relatedNews">
 
-          <% related.forEach(related => { %>
-            <div class="myCardItem" id="newsItem"><!-- ITEM START -->
-              <a href="/news/<%= related._id %>"> 
-              <img src="<%= related.img %> "  alt="<%= article.title %>">
-              <div class="myCardDetails">
-                <small><%= formatDate(related.createdAt) %> </small>
-                <h3><%= related.title %> </h3>
-                <p><%- related.desc %> </p>
-              </div>
-            </a>
-          </div><!-- ITEM END --> 
-          <% }) %> 
+          <% related.forEach(related=> { %>
+            <div class="myCardItem" id="newsItem">
+              <!-- ITEM START -->
+              <a href="/news/<%= related._id %>">
+                <img src="<%= related.img %> " alt="<%= article.title %>">
+                <div class="myCardDetails">
+                  <small>
+                    <%= formatDate(related.createdAt) %>
+                  </small>
+                  <h3>
+                    <%= related.title %>
+                  </h3>
+                  <p>
+                    <%- related.desc %>
+                  </p>
+                </div>
+              </a>
+            </div><!-- ITEM END -->
+            <% }) %>
         </div>
       </section>
     </aside>
 
-    <div class="backBtnWrapper"><a data-aos="fade-up" data-aos-delay="100" class="myBackBtn" onclick="history.back()">بازگشت به صفحه‌ی قبل</a></div>
-  </div>
+    <div class="backBtnWrapper"><a data-aos="fade-up" data-aos-delay="100" class="myBackBtn"
+        onclick="history.back()">بازگشت به صفحه‌ی قبل</a></div>
+    </div>
   </main>
 
 
@@ -135,7 +146,7 @@
   <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
   <script src="/js/owl.carousel.min.js"></script>
   <script src="/js/script.js"></script>
-<script src="/js/singlePage.js"></script>
+  <script src="/js/singlePage.js"></script>
 
 </body>
 

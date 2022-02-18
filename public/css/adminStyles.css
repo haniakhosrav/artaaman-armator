@@ -15,7 +15,7 @@
   }
 
   body {
-      font-family: "Shabnam-Normal" !important;
+      font-family: "Shabnam-Normal" ;
   }
 
 
@@ -53,28 +53,39 @@
 .eachArticle {
   border: 1.5px solid #febf50;
   border-radius: 10px;
-  width: 70vw;
-  height: 35vh;
-  margin-bottom: 30px;
+  width: 90%;
+max-height: 35vh;
+/* overflow: hidden; */
+  margin-bottom: 3rem;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-}
+  display: flex;
+  justify-content: space-between;
+flex-wrap: wrap;
 
-.title {
+}
+.articleContainer{
+width: 100%;
+ height: 100%;
+    display: flex;
+  justify-content: space-around;
+flex-wrap: wrap;
+}
+/* .title {
   position: absolute;
   top: 10px;
   left: 200px;
-}
+} */
 
-.desc {
-  position: absolute;
+.article-info {
+  /* position: absolute;
   top: 50px;
-  left: 150px;
-  text-align: right;
-  width: 250px;
-  height: 150px;
-  overflow: hidden;
+  left: 150px; */
+  /* text-align: right; */
+width: 50%;
+  max-height: 100%;
+  overflow: hidden ;
 }
 
 .addNewOne {
@@ -86,26 +97,43 @@
 }
 
 .articleImg {
-  height: 100%;
-  width: 50%;
-  position: absolute;
+  /* height: auto; */
+min-width:200px;
+max-height: 100%;
+overflow: hidden;
+
+  /* position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 0; */
+  background: #000;
   border-radius: 0 10px 10px 0;
 }
 
+.btn-container{
+  /* min-width: 100px; */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap:1rem;
+}
 .deleteBtn {
-  position: absolute;
+  /* position: absolute;
   bottom: 5px;
-  left: 5px;
+  left: 5px; */
+  /* border-radius: 10px;
+  background-color: red;
+  color: white; */
 }
 
 .editBtn {
-  position: absolute;
+  /* position: absolute;
   top: 5px;
-  left: 5px;
-  background-color: #214E43;
+  left: 5px; */
+  /* border-radius: 10px;
+
+  color: white;
+  background-color: #214E43; */
 }
 
 .addBtn {
@@ -113,11 +141,11 @@
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 447px) {
   .eachArticle {
-    width: 85vw;
+    max-height:50vh;
   }
-  .desc {
+  /* .desc {
     position: absolute;
     top: 50px;
     left: 10px;
@@ -129,6 +157,18 @@
     position: absolute;
     top: 10px;
     left: 150px;
+  } */
+  .article-info {
+    max-height: 80%;
+    overflow: hidden;
+  }
+  .articleImg {
+    /* height: auto; */
+  /* min-width:200px; */
+  max-height: 20%;}
+
+  .btn-container{
+  justify-content: center;
   }
 }
 
