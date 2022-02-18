@@ -48,7 +48,8 @@ exports.handleNews = async (req, res) => {
         return res.redirect('/adminpanel');
     }
 
-
+    if(req.file == undefined) image = '/images/logo-grey.svg';
+    else image = req.file.path.replace(/\134/g,"/").slice(6);
 
     const createdOrChanged = {
         title, 
@@ -72,8 +73,6 @@ exports.handleNews = async (req, res) => {
         req.flash('error', 'مشکلی در برقراری ارتباط با سرور وجود دارد');
         res.redirect('/adminpanel');
     }
-    if(req.file == undefined) image = '/images/logo-grey.svg';
-    else image = req.file.path.replace(/\134/g,"/").slice(6);
 }
 
 //? handle loading news
