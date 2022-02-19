@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://artaaman.com/</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/gallery</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/about</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/contact</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/621021d0e0e3846605b23dc0</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/620fdbd6bec99c3bf2005e4b</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/620fd28abec99c3bf2005dd8</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/620fca4b9e2e8dd3ee2ce05c</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news/620e8f4cb1a303e696088d29</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://artaaman.com/news</loc>
+  <lastmod>2022-02-19T16:55:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
