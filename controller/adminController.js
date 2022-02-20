@@ -36,7 +36,6 @@ exports.handleAdminLogin = (req, res) => {
 //? sending news 
 
 exports.handleNews = async (req, res) => {
-    let image;
     const {title, desc, label} = req.body;
 
     if(!title || !desc) {
@@ -48,24 +47,24 @@ exports.handleNews = async (req, res) => {
         return res.redirect('/adminpanel');
     }
 
-    if(req.file == undefined) image = '/images/logo-grey.svg';
-    else image = req.file.path.replace(/\134/g,"/").slice(6);
-
     const createdOrChanged = {
         title, 
         desc, 
         label: label.trim(),
-        img: image
     }
 
     try {
         console.log(req.url)
         if(req.url == '/handlenews') {
-            await newsModel.create(createdOrChanged);
+            await newsModel.create({...createdOrChanged, 
+                img: req.file == undefined ? '/images/logo-grey.svg' 
+                : req.file.path.replace(/\134/g,"/").slice(6)});
             req.flash('success', 'مقاله با موفقیت افزوده شد');
         }
         else {
-            await newsModel.findOneAndUpdate({_id:req.params.id}, createdOrChanged);
+            await newsModel.findOneAndUpdate({_id:req.params.id}, {...createdOrChanged, 
+            img: req.file == undefined ? this.img 
+            : req.file.path.replace(/\134/g,"/").slice(6)});
             req.flash('success', 'مقاله با موفقیت تغییر یافت');
         }
         res.redirect('/adminpanel');
