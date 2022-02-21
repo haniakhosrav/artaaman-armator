@@ -75,9 +75,7 @@ a:hover{
     padding: 2rem;
     /* column-count: 2; */
 
-    column-gap: 7%;
-    text-justify: inter-word;
-    text-align: justify;
+
     
   }
   .shareIcones {

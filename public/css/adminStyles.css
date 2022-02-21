@@ -28,12 +28,14 @@
 }
 
 .editArticle, .addNewArticle {
-    position: fixed;
-    top: 50px;
-    bottom: 20px;
+  width: 90%;
+  min-height: 70vh;
+    /* position: fixed; */
+    /* top: 0; */
+   /*  bottom: 20px;
     right: 80px;
-    left: 80px;
-    overflow: auto;
+    left: 80px; */
+    /* overflow: auto; */
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s;
     z-index: 1;
@@ -41,22 +43,37 @@
     background: #e3ecec !important;
     direction: rtl;
     box-shadow: 0px 0px 20px -3px;
+    margin:auto;
+}
+.addNewArticle{
+  width: 100%;
+  position: absolute;
+    top: 0px;
+}
+ form{
+  display: flex;
+  flex-direction: column;
 }
 
-
 .closeTab {
-  position: absolute;
+  /* position: absolute;
   top: 10px;
-  right: 10px;
+  right: 10px; */
+}
+.eachArticle-wrapper{
+  display: flex; 
+  flex-wrap: wrap;
+   width: 100%;
+
+
 }
 
 .eachArticle {
-  border: 1.5px solid #febf50;
   border-radius: 10px;
   width: 90%;
 max-height: 35vh;
 /* overflow: hidden; */
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -64,13 +81,17 @@ max-height: 35vh;
   justify-content: space-between;
 flex-wrap: wrap;
 
+border: 1.5px solid #febf50;
+
 }
+
 .articleContainer{
 width: 100%;
  height: 100%;
     display: flex;
   justify-content: space-around;
 flex-wrap: wrap;
+
 }
 /* .title {
   position: absolute;
@@ -106,7 +127,6 @@ overflow: hidden;
   right: 0;
   top: 0;
   bottom: 0; */
-  background: #000;
   border-radius: 0 10px 10px 0;
 }
 
