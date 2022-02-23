@@ -39,9 +39,16 @@
 {
 text-align: right !important;
 direction: rtl !important;
+
 } 
  .gslide-title{
+   font-family: 'Shabnam-Bold'!important;
+
   margin: 0 auto .2rem !important;
+}
+.glightbox-clean .gslide-desc{
+     font-family: 'Shabnam-Normal'!important;
+
 }
 
 .filter-button:hover {

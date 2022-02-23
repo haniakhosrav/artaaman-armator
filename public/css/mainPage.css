@@ -2,15 +2,41 @@
 /* -------------------------------------------------------------------------- */
 /*                                   HEADER                                   */
 /* -------------------------------------------------------------------------- */
+
 abbr{
   text-decoration: none; 
-   border-bottom:1px solid var(--yellow-dark);
+   border-bottom:2px dotted var(--grey-mid) ;
    cursor:pointer;
 
 }
 
-
-
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  background-color: var(--yallow-mid);
+  color: var(--grey-mid);
+  /* color: #111; */
+  font-size: 1rem;
+  position: absolute;
+  /* padding: 1px 5px 2px 5px; */
+  bottom: -1.6em;
+  /* right: 50%; */
+  left: 10%;
+  white-space: nowrap;
+  /* box-shadow: 1px 1px 3px #222222; */
+  opacity: 0;
+  /* border: 1px solid #111111; */
+  /* z-index: 99999; */
+  visibility: hidden;
+}
+[data-title] {
+  position: relative;
+  
+}
 .myHeader {
   min-height: 100vh;
   background: url(../images/headearBg-right-edit.svg) right top no-repeat,
@@ -630,6 +656,12 @@ height: auto;
   .myFqa-wrapper {
     min-height: 80vh;
   }
+  .myFqa-wrapper a:hover{
+color: var(--yellow-dark);  }
+  .myFqa-wrapper a{
+color: var(--yallow-mid);  }
+
+
   .myFqa-container h2 {
     margin-bottom: 3rem;
   }

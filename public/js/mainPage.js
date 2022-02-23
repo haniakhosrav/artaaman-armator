@@ -3,9 +3,9 @@
 /* -------------------------------------------------------------------------- */
 
 var swiper = new Swiper(".mySwiper", {
-    loop: true,
+    // loop: true,
     // spaceBetween: 10,
-    slidesPerView: 8,
+    slidesPerView: 4,
     freeMode: true,
     watchSlidesProgress: true,
     rtl: true,
