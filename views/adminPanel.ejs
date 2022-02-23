@@ -45,26 +45,39 @@
                         <button class="btn btn-outline-warning "
                             onclick="document.getElementById('addNewArticle').style.display='block'">افزودن مقاله
                             جدید</button>
+
+                            <div id="addNewArticle" class="addNewArticle ">
+                                <button onclick="document.getElementById('addNewArticle').style.display='none'"
+                                    class="btn btn-outline-danger closeTab">بستن</button>
+                                <h3 class="">افزودن مقاله جدید</h3>
+                                <form  action="/handlenews" method="post" enctype="multipart/form-data">
+                                    <div  style="display: flex; width: 100%;">
+                                    <label for="title">عنوان مقاله</label>
+                                    <input class=" " id="title" type="text" name="title">
+                                    </div>
+                                    <div class="decs-wrapper" style="display: flex; width: 100%;">
+                                    <label for="desc">توضیحات مقاله</label>
+                                    <textarea id="desc" name="desc"></textarea>
+                                     </div>
+                                        <div style="display: flex; ">
+                                            <label for="label">دسته بندی</label>
+                                            <input class=" " id="label" type="text" name="label">
+                                        </div>
+                                        
+                                        <div style="display: flex; ">
+        
+                                        <label for="image">افزودن عکس</label>
+                                            <input class=" " type="file" id="image" name="image">
+                                        </div>
+        
+                                    <button class="btn text-warning addBtn  " type="submit"> افزودن مقاله</button>
+                                </form>
+                            </div>
                         <h1 style="background-color: rgb(255, 255, 255);">لیست مقالات</h1>
                     </div>
                     <div style=" display: flex; flex-wrap: wrap; width: 100%; height: 100%; ">
 
-                    <div id="addNewArticle" class="addNewArticle ">
-                        <button onclick="document.getElementById('addNewArticle').style.display='none'"
-                            class="btn btn-outline-danger closeTab">بستن</button>
-                        <h3 class="">افزودن مقاله جدید</h3>
-                        <form action="/handlenews" method="post" enctype="multipart/form-data">
-                            <label for="title">عنوان مقاله</label>
-                            <input class="form-control " id="title" type="text" name="title">
-                            <label for="desc">توضیحات مقاله</label>
-                            <textarea id="desc" name="desc"></textarea>
-                            <label for="label">دسته بندی</label>
-                            <input class="form-control " id="label" type="text" name="label">
-                            <label for="image">افزودن عکس</label>
-                            <input class=" " type="file" id="image" name="image">
-                            <button class="btn text-warning addBtn  " type="submit"> افزودن مقاله</button>
-                        </form>
-                    </div>
+                
 
                     <!-- *************************************************************** -->
                     <!-- ************************ ARTICLES LIST ************************ -->
@@ -103,19 +116,27 @@
                                     <h3 class="">ویرایش مقاله</h3>
                                     <form action="/editarticle/<%= article._id %>" method="post"
                                         enctype="multipart/form-data">
+                                        <div style="display: flex; width: 100%;">
                                         <label for="editedTtitle">عنوان مقاله</label>
-                                        <input class="form-control" id="editedTitle" type="text" name="title"
+                                        <input class="" id="editedTitle" type="text" name="title"
                                             value="<%= article.title %> ">
+                                            </div>
+                                            <div style="display: flex; width: 100%;">
                                         <label for="editedDesc">توضیحات مقاله</label>
-                                        <textarea  class="form-control " id="editedDesc"
+                                        <textarea  class=" " id="editedDesc"
                                             name="desc">
                                 <%= article.desc %>
                             </textarea>
+                            </div>
+                            <div style="display: flex; width: 100%;">
                                         <label for="label">دسته بندی</label>
-                                        <input class="form-control " id="label" type="text" name="label"
+                                        <input class=" " id="label" type="text" name="label"
                                             value="<%= article.label %> ">
+                                            </div>
+                                            <div style="display: flex; width: 100%;">
                                         <label for="image">افزودن عکس</label>
                                         <input class=" " type="file" id="image" name="image">
+                                        </div>
                                         <button class="btn text-warning addBtn " type="submit"> ویرایش</button>
                                     </form>
                                 </div>
@@ -134,12 +155,7 @@
                             .catch(error => {
                                 console.error(error);
                             });
-            // ClassicEditor
-            //     .create( document.querySelector( '#editedDesc' ) )
-            //     .catch( error => {
-            //         console.error( error );
-            //     } );
-
+     
 
 
                     </script>
