@@ -374,54 +374,6 @@ strong {
   min-height: 10vh;
 }
 /* -------------------------------------------------------------------------- */
-/*                                   HEADER                                   */
-/* -------------------------------------------------------------------------- */
-
-.myHeader {
-  min-height: 100vh;
-  background: url(../images/headearBg-right-edit.svg) right top no-repeat,
-    url(../images/headearBg-left-edit.svg) left top no-repeat;
-  background-size: 200px, 200px;
-  display: flex;
-  align-items: center;
-}
-
-.myHeader-contents {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-}
-
-.myHeader-contents img {
-  width: 60%;
-}
-
-.myHeader-contents h1 {
-  color: var(--grey-dark);
-  text-align: center;
-  margin: 3rem auto 2rem;
-  width: 80%;
-}
-
-.myHeader-contents button {
-  padding: 0.5rem 2rem;
-  background-color: transparent;
-  border-radius: 50px;
-  color: var(--green-mid);
-  border: var(--green-mid) 2px solid;
-  font-family: "Shabnam-Normal";
-}
-
-.myHeader-contents button:hover {
-  color: var(--yallow-mid);
-  border: var(--yallow-mid) 2px solid;
-  font-weight: bold;
-}
-
-/* -------------------------------------------------------------------------- */
 /*                                   FOOTER                                   */
 /* -------------------------------------------------------------------------- */
 

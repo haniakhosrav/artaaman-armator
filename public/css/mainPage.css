@@ -1,5 +1,62 @@
 
 /* -------------------------------------------------------------------------- */
+/*                                   HEADER                                   */
+/* -------------------------------------------------------------------------- */
+abbr{
+  text-decoration: none; 
+   border-bottom:1px solid var(--yellow-dark);
+   cursor:pointer;
+
+}
+
+
+
+.myHeader {
+  min-height: 100vh;
+  background: url(../images/headearBg-right-edit.svg) right top no-repeat,
+    url(../images/headearBg-left-edit.svg) left top no-repeat;
+  background-size: 200px, 200px;
+  display: flex;
+  align-items: center;
+}
+
+.myHeader-contents {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.myHeader-contents img {
+  width: 35%;
+}
+
+.myHeader-contents h1 {
+  color: var(--grey-dark);
+  text-align: center;
+  margin: 1rem auto 4rem;
+    width: 80%;
+  font-size: 2rem;
+}
+
+.myHeader-contents button {
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border-radius: 50px;
+  color: var(--green-mid);
+  border: var(--green-mid) 2px solid;
+  font-family: "Shabnam-Normal";
+}
+
+.myHeader-contents button:hover {
+  color: var(--yallow-mid);
+  border: var(--yallow-mid) 2px solid;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                   WHY-US?                                  */
 /* -------------------------------------------------------------------------- */
 .myWhyUs-wrapper {
@@ -647,13 +704,19 @@ height: auto;
       flex-wrap: wrap;
       align-content: flex-end;
     }
+    .myHeader-contents h1 {
+      font-size: 1.5rem;
+    }
+    
   }
   @media only screen and (max-width: 900px) {
     .myHeader {
       background: url(../images/headearBg-right-edit.svg) right top no-repeat,
         url(../images/headearBg-left-edit.svg) left top no-repeat;
       background-size: 20vw, 20vw;
-    }}
+    }
+  
+  }
   @media only screen and (max-width: 760px) {
     .myWhyUs-item {
       width: 85%;
@@ -686,6 +749,15 @@ height: auto;
   
 
 @media only screen and (max-width: 425px) {
+  .myHeader-contents h1 {
+    font-size: 1rem;
+  }
+   .myHeader-contents button {
+    padding: 0.3rem 1.8rem;
+  }
+  .myHeader-contents img {
+    width: 70%;
+  }
   .accordion {
     font-size: 16px;
   }
@@ -697,15 +769,7 @@ height: auto;
   .mySwiper-container {
     width: 100%;
   }
-  .myHeader-contents h1 {
-    font-size: 1.5rem;
-  }
-  .myHeader-contents button {
-    padding: 0.3rem 1.8rem;
-  }
-  .myHeader-contents img {
-    width: 70%;
-  }
+ 
 
   .myAboutUs-container {
     width: 90%;
@@ -716,6 +780,7 @@ height: auto;
 
 }
 @media only screen and (max-width: 375px) {
+ 
   .myWhyUs-wrapper{
     margin: auto;
   }
