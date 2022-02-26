@@ -56,7 +56,8 @@ abbr{
 }
 
 .myHeader-contents img {
-  width: 35%;
+  width: 400px;
+  /* padding: .2rem; */
 }
 
 .myHeader-contents h1 {
@@ -246,6 +247,8 @@ abbr{
     height: 10vh;
     box-sizing: border-box;
     border-radius: 25px;
+    margin-top: 2rem;
+    
   }
   
   .mySwiper .swiper-slide {
@@ -728,6 +731,13 @@ color: var(--yallow-mid);  }
   /*                                 RESPONSIVE                                 */
   /* -------------------------------------------------------------------------- */
 
+  @media only screen and (max-width: 1024px) {
+    .myWhyUs-item{
+      width: 20em;
+    }
+
+  }
+
   @media only screen and (max-width: 1066px) {
     .myWhyUs-contents {
       width: 100%;
@@ -749,10 +759,26 @@ color: var(--yallow-mid);  }
     }
   
   }
+  @media only screen and (max-width: 768px) {
+    .myHeader-contents img {
+  
+  
+      width: 300px;
+    }
+    .myWhyUs-wrapper {
+      margin: 4rem auto 0;}
+      .mySwiper-container {
+        width: 85%;}
+
+        .myAboutUs-container {
+        padding: 1rem 0;
+  }
   @media only screen and (max-width: 760px) {
     .myWhyUs-item {
-      width: 85%;
+      width: 15em;
     }
+   
+
   }
 
   @media only screen and (max-width: 700px) {
@@ -769,13 +795,43 @@ color: var(--yallow-mid);  }
     .myFqa-container {
       padding: 3rem;
     }
+    .myAboutUs-container p,.myAboutUs-container h2{
+      width: 80%;
+    }
+    /* .myAboutUs-container img:last-child {
+      width: 2em;
+    }
+    .myAboutUs-container img:first-of-type {
+      width: 3.5em;} */
+      .myAboutUs-container img:last-child {
+        top: -20px;
+        left: -7px;
+      }
+      .myAboutUs-container img:first-of-type {
+        right: -20px;
+        bottom: -20px;
+      }
+  
+    .myAboutUs-container {
+      width: 90%;
+      font-size: 80%;
+    }
   }
 
   @media only screen and (max-width: 600px) {
     .myFqa-container {
       margin: 3rem auto;
       padding: 1rem;
-    }
+    } 
+ 
+
+  .mySlideShow-info{
+    right: 10px;
+  }
+
+  .myWhyUs-item{
+    width: 11em;
+  }
   }
 
   
@@ -783,13 +839,19 @@ color: var(--yallow-mid);  }
 @media only screen and (max-width: 425px) {
   .myHeader-contents h1 {
     font-size: 1rem;
+    margin: 1rem auto 2rem;
   }
    .myHeader-contents button {
     padding: 0.3rem 1.8rem;
   }
-  .myHeader-contents img {
-    width: 70%;
+  .myWhyUs-item{
+    width: 10em;
   }
+  .myWhyUs-wrapper {
+    margin: 4rem auto 0;}
+  [data-title]:after {
+ 
+  font-size: .5rem;}
   .accordion {
     font-size: 16px;
   }
@@ -801,26 +863,51 @@ color: var(--yallow-mid);  }
   .mySwiper-container {
     width: 100%;
   }
- 
+  
+  .myHeader-contents img {
+  
+  width: 250px;
+}
 
-  .myAboutUs-container {
-    width: 90%;
-    font-size: 80%;
+  .mySlogan-container {
+    padding: 1rem;
+    width: auto;
   }
-
-    
+  .mySlogan-wrapper{
+    /* margin: 6rem 0; */
+  }
+  .mySlogan-container h2 {
+    margin-bottom: auto;
+  }
+  .mySlogan-contents div {
+    margin-bottom: auto;
+  }
+  .myGallery-container {
+    min-height: 110em;
+}
 
 }
 @media only screen and (max-width: 375px) {
- 
+  .myHeader-contents img {
+  
+    width: 200px;
+  }
+  
   .myWhyUs-wrapper{
     margin: auto;
+  }
+  .myWhyUs-item{
+    width: 15em;
+  }
+  .myWhyUs-item p, .myWhyUs-item h3 {
+    width: 100%;
   }
   .owl-theme .owl-dots .owl-dot {
     zoom: 0.8;
   }
 
   .mySwiper-container {
+    padding: 0 2rem;
     width: 100%;
 }
 .mySwiper-container h2 {
@@ -834,13 +921,14 @@ color: var(--yallow-mid);  }
 
   
 .myAboutUs-wrapper{
-  margin: 6rem 0;
+  margin: 2rem 0;
 }
 .myAboutUs-container h2 {
   margin: 1rem auto;
   width: 78%;}
   .myGallery-wrapper {
     height: 100vh;
+    margin: 1rem ayto;
   }
   .myAboutUs-container p {
     margin: 0 auto;
@@ -862,23 +950,10 @@ margin-bottom: 0;
     min-height:110em;
   }
   .myFqa-wrapper{
-    margin: 6rem 0;
+    /* margin: 6rem 0; */
   }
   .myFqa-container {
     padding: 0.5rem;
-  }
-  .mySlogan-container {
-    /* padding: 0; */
-    width: auto;
-  }
-  .mySlogan-wrapper{
-    margin: 6rem 0;
-  }
-  .mySlogan-container h2 {
-    margin-bottom: auto;
-  }
-  .mySlogan-contents div {
-    margin-bottom: auto;
   }
 }
 
@@ -900,7 +975,10 @@ margin-bottom: 0;
 }
 
 @media only screen and (max-width: 200px) {
- 
+  .myHeader-contents img {
+  
+    width: 100px;
+  }
   .swiper-slide img {
     max-height: 15vh;
   }
@@ -942,4 +1020,4 @@ margin-bottom: 0;
   .swiper-slide img {
     max-height: 5vh;
   }
-}
+}}

@@ -55,7 +55,7 @@ var swiper = new Swiper(".mySwiper", {
       0: {
         items: 1,
       },
-      768: {
+     425: {
         items: 2,
       },
       900: {
