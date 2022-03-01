@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="299" height="216.518" viewBox="0 0 299 216.518">
+  <g id="Group_87" data-name="Group 87" transform="translate(-87.017 86.898)">
+    <g id="Group_1" data-name="Group 1" transform="translate(186.467 -86.898)">
+      <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="12.998" cy="12.998" rx="12.998" ry="12.998" transform="translate(51.617 0)" fill="#febf50"/>
+      <g id="Group_16" data-name="Group 16" transform="translate(0 25.21)">
+        <path id="Path_22" data-name="Path 22" d="M375.055,72.764c0-19.736-3.785-40.232-33.9-40.232-13.339,0-26.784,7.7-31.966,18.765a52.926,52.926,0,0,1,26.318-5.082c17.289,1.165,21.285,12.514,21.711,20.836l-.175,34.184a18.689,18.689,0,0,1-1.018,5.7,24.877,24.877,0,0,1-23.805,16.48c-9.845.233-20.016-8.594-19.313-22.517.408-8.061,4.7-14.44,12.952-21.162a90.906,90.906,0,0,1,27.38-15.663c-15.525.333-30.522,5.506-39.1,11.988a40.759,40.759,0,0,0-16.706,32.3c0,14.242,10.173,28.282,30.112,28.282a36.676,36.676,0,0,0,30.115-14.65l-.172,14.619h27.392c-.438-2.4-9.924-8.5-9.924-8.5Z" transform="translate(-297.441 -32.532)" fill="#febf50"/>
+      </g>
+    </g>
+    <text id="artaman" transform="translate(87.017 109.62)" fill="#2b6859" font-size="79" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">artaman</tspan></text>
+    <text id="_." data-name="." transform="translate(368.017 104.62)" fill="none" font-size="80" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">.</tspan></text>
+  </g>
+</svg>

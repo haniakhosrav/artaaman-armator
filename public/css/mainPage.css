@@ -226,7 +226,8 @@ abbr{
   .swiper-slide img {
     display: block;
     max-height: 40vh;
-    object-fit: contain;
+    /* object-fit: contain; */
+    object-fit: cover;
     border-radius: 5px;
     /* border-radius: 25px; */
     margin: 0 auto;
@@ -777,8 +778,12 @@ color: var(--yallow-mid);  }
     .myWhyUs-item {
       width: 15em;
     }
-   
-
+    .myGallery-wrapper {
+      width: 80%;
+    }
+    .myHeader-contents h1{
+      width: 70%;
+    }
   }
 
   @media only screen and (max-width: 700px) {
@@ -789,9 +794,7 @@ color: var(--yallow-mid);  }
       width: 80%;
       margin: 0 auto;
     }
-    .myGallery-wrapper {
-      width: 80%;
-    }
+    
     .myFqa-container {
       padding: 3rem;
     }
