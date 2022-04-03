@@ -226,8 +226,8 @@ abbr{
   .swiper-slide img {
     display: block;
     max-height: 40vh;
-    /* object-fit: contain; */
-    object-fit: cover;
+    object-fit: contain;
+    /* object-fit: cover; */
     border-radius: 5px;
     /* border-radius: 25px; */
     margin: 0 auto;
