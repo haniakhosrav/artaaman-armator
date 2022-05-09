@@ -160,6 +160,7 @@ strong {
   display: flex;
   justify-content: center;
 }
+img{color: var(--green-mid);}
 /* Ripple In */
 @-webkit-keyframes hvr-ripple-in {
   100% {
