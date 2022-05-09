@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/artaaman/myProject
+    - /bin/cp * $DEPLOYPATH
+ 
